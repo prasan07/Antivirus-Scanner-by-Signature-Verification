@@ -25,6 +25,4 @@ DESCRIPTION OF WORK TO BE DONE:
    files, directories and symlinks. Accordingly, it would add the .virus suffix to vulnerable 
    objects and chmod them.
    On-access scan from the kernel space must invoke this user space function, providing the 
-   pathname as input.
-
-
+   pathname as input. --------------> DONE - Need to plugin in comparison and DB update APIs.
