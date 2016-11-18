@@ -26,3 +26,14 @@ DESCRIPTION OF WORK TO BE DONE:
    objects and chmod them.
    On-access scan from the kernel space must invoke this user space function, providing the 
    pathname as input. --------------> DONE - Need to plugin in comparison and DB update APIs.
+
+
+
+Using MYSQL with C - some helpful guides:
+
+http://www.cs.wichita.edu/~chang/lecture/cs742/program/how-mysql-c-api.html
+
+https://stackoverflow.com/questions/6413855/update-database-table-from-one-sql-server-database-table-to-another
+
+Added a file - script.sh in Shyam's Changes folder - This script will create a test_dir with sample
+files - Can be used during tests if needed
