@@ -26,3 +26,18 @@ DESCRIPTION OF WORK TO BE DONE:
    objects and chmod them.
    On-access scan from the kernel space must invoke this user space function, providing the 
    pathname as input. --------------> DONE - Need to plugin in comparison and DB update APIs.
+
+COMPLETED WORK :
+User space application
+
+PENDING WORK :
+	Kernel interception for open syscall has been coded. Will test today to see if it works.
+	Will also test invocation of user space application.
+	Will then check for other syscalls like exec, execv, execlv etc.
+
+	The DB-update API must be plugged into the space provided in the main() function.
+
+	The blacklist and whitelist logic must be plugged into the space provided in the 
+	file_scan() function.
+
+	Error reporting from user space app must be checked to see as to what happens if the kernel 	   invokes it.
