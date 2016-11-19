@@ -53,3 +53,5 @@ file_scan() function.
 
 Error reporting from user space app must be checked to see as to what happens if the kernel 	   invokes it.
 
+
+https://www.cyberciti.biz/tips/how-do-i-enable-remote-access-to-mysql-database-server.html
