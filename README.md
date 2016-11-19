@@ -57,3 +57,4 @@ Error reporting from user space app must be checked to see as to what happens if
 https://www.cyberciti.biz/tips/how-do-i-enable-remote-access-to-mysql-database-server.html
 
 https://stackoverflow.com/questions/15872543/access-remote-database-from-command-line
+grant all privileges on cse509.* to 'barani008'@'%' identified by 'criminalminds';
