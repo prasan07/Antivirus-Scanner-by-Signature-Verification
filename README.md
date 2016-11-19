@@ -65,3 +65,6 @@ TO connect to a remote mysql server,
 3. grant all the permission using the following 
 grant all privileges on cse509.* to 'username'@'%' identified by 'passphrase';
 4. Make sure that the previleges are set for the tables as well.
+
+gcc command to compile with the libraries:
+gcc -o operations dboperations.c getSha256.c `mysql_config --cflags --libs` -lssl -lcrypto
