@@ -57,4 +57,11 @@ Error reporting from user space app must be checked to see as to what happens if
 https://www.cyberciti.biz/tips/how-do-i-enable-remote-access-to-mysql-database-server.html
 
 https://stackoverflow.com/questions/15872543/access-remote-database-from-command-line
-grant all privileges on cse509.* to 'barani008'@'%' identified by 'criminalminds';
+
+TO connect to a remote mysql server, 
+
+1. comment out the bind address in the /etc/mysql/my.cnf
+2. use the "/sbin/iptables -A INPUT -i eth0 -p tcp --destination-port 3306 -j ACCEPT" to suppress firewall. instead of 'eth0' use your interface.
+3. grant all the permission using the following 
+grant all privileges on cse509.* to 'username'@'%' identified by 'passphrase';
+4. Make sure that the previleges are set for the tables as well.
