@@ -97,35 +97,30 @@ int update_structures(){
         MYSQL_ROW row;
 	MYSQL *conn;
         MYSQL *remote_conn;
+	int retval = 0;
 
         conn = mysql_init(NULL);
         /* Connect to local database */
         if (!mysql_real_connect(conn, SERVER_LOC,
                                 USER, PASS, DATABASE, 0, NULL, 0)) {
                 fprintf(stderr, "%s\n", mysql_error(conn));
-                return -1;
+                retval = -1;
+		goto out;
         }
-	/*//retrieve max id from whitelist
-        if (mysql_query(conn, "select max(hash_id) from whitelist")) {
+	if(mysql_query(conn, "START TRANSACTION")){
+		fprintf(stderr, "%s\n", mysql_error(conn));
+                retval = -1;
+                goto out;
+	}
+	if (mysql_query(conn, "delete from whitelist where hash_id = 1")) {
                 fprintf(stderr, "%s\n", mysql_error(conn));
-                return -1;
+                retval = -1;
+                goto out;
         }
-        res = mysql_use_result(conn);
-        if((row = mysql_fetch_row(res)) != NULL){
-                max_hash_id = atoi(row[0]);
-        }else{
-                max_hash_id = 0;
-        }
-	//retrieve max id from blacklist
-	if (mysql_query(conn, "select max(signature_id) from blacklist")) {
+        if (mysql_query(conn, "delete from blacklist where signature_id = 1")) {
                 fprintf(stderr, "%s\n", mysql_error(conn));
-                return -1;
-        }
-	res = mysql_use_result(conn);
-        if((row = mysql_fetch_row(res)) != NULL){
-                max_signature_id = atoi(row[0]);
-        }else{
-                max_signature_id = 0;
+                retval = -1;
+                goto out;
         }
 	// Connect to remote database */
 	remote_conn = mysql_init(NULL);
@@ -134,45 +129,56 @@ int update_structures(){
                 //fprintf(stderr, "%s\n", mysql_error(conn));
 		perror("error!!");
 		printf("connection failed!!!");
-                return -1;
+                retval = -1;
+		goto out;
         }
-	/*retrieve update data for whitelist*/
-	//sprintf(query, "select * from whitelist");
-        if (mysql_query(remote_conn, "select * from `whitelist`")) {
-                fprintf(stderr, "%s\n", mysql_error(conn));
-		printf("exit");
-                return -1;
+	//retrieve update data for whitelist
+        if (mysql_query(remote_conn, "select * from whitelist")) {
+                fprintf(stderr, "%s\n", mysql_error(conn));		
+                retval = -1;
+		goto out;
         }
 	res = mysql_store_result(remote_conn);
-	int num = mysql_num_rows(res);
-	/* insert new data into whitelist*/
+	// insert new data into whitelist
         while((row = mysql_fetch_row(res)) != NULL){
                 sprintf(insert_query, "insert into whitelist values (%d , '%s')", atoi(row[0]), row[1]);
 		if (mysql_query(conn, insert_query)) {
                 	fprintf(stderr, "%s\n", mysql_error(conn));
-                	return -1;
+                	retval = -1;
+			goto out;
         	}
         }
 	mysql_free_result(res);
-	/*retrieve update data for blacklist*/
-	sprintf(query, "select * from blacklist");
-        if (mysql_query(remote_conn, query)) {
+	//retrieve update data for blacklist
+        if (mysql_query(remote_conn, "select * from blacklist")) {
                 fprintf(stderr, "%s\n", mysql_error(conn));
-                return -1;
+		retval = -1;
+                goto out;
         }
         res = mysql_use_result(remote_conn);
-	/* insert new data into blacklist*/
+	// insert new data into blacklist
         while((row = mysql_fetch_row(res)) != NULL){
                 sprintf(insert_query, "insert into blacklist values (%d , '%s')", atoi(row[0]), row[1]);
                 if (mysql_query(conn, insert_query)) {
                         fprintf(stderr, "%s\n", mysql_error(conn));
-                        return -1;
+			retval = -1;
+                        goto out;
                 }
         }
-	/*perform clean up and exit*/
+	if(mysql_query(conn, "COMMIT")){
+        	fprintf(stderr, "%s\n", mysql_error(conn));
+                retval = -1;
+	}
+	printf("Commited the changes\n");
+	//perform clean up and exit
+out:
+	if(retval == -1){
+		mysql_query(conn, "ROLLBACK");
+		printf("Rolling back DB changes\n");
+	}
         mysql_free_result(res);
         mysql_close(conn);
-	return 0;	
+	return retval;	
 }
 
 /*
@@ -218,9 +224,9 @@ int isWhitelisted(char * file_path){
    	mysql_close(conn);
 	return result;
 }
-/*
-int main() {
-        struct signatures* data = getstructures();
+
+//int main() {
+        /*struct signatures* data = getstructures();
         int count = data->sig_count;
         int i = 0;
         int next_loc = 0;
@@ -255,6 +261,6 @@ int main() {
         for(i = 0;i<count; i++){
                 printf("%s \n", data->signatures+next_loc);
                 next_loc+= strlen(data->signatures+next_loc)+1;
-        }
+        }*/
 	//printf("%d \n", update_structures());	
-}*/
+//}
