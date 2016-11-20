@@ -8,6 +8,7 @@
 #include <sys/stat.h>
 #include "blacklist.h"
 #include "dbutility.h"
+
 /* Stack used in recursive directory scans
  * to save the index of the file path from where
  * next scan file/dir name needs to be appended
@@ -26,7 +27,9 @@ struct idx_stack *insStack(int idx)
                 sizeof(struct idx_stack));
 
         if (!StackEntry) {
+#ifdef DEBUG
                 fprintf(stderr, "Stack Entry Malloc failed\n");
+#endif
                 return NULL;
         }
 
@@ -91,7 +94,9 @@ struct quarantine_list *newItem(char *file_name, int name_size)
                 sizeof(struct quarantine_list) + name_size);
 
         if (!item) {
+#ifdef DEBUG
                 fprintf(stderr, "List Item Malloc failed\n");
+#endif
                 return NULL;
         }
 
@@ -178,7 +183,9 @@ int printMsgBox(void)
         xmessage = (char *)malloc(size + 2);
 
         if (!xmessage) {
+#ifdef DEBUG
                 fprintf(stderr, "Message Box allocation error\n");
+#endif
                 ret = -ENOMEM;
                 goto exit_printMsgBox;
         }
@@ -210,21 +217,28 @@ int file_scan(char *arg)
 
         ret = blacklist_scan(arg);
 
-        printf("========> Scanning file %s\n", arg);
+#ifdef DEBUG
+        printf("Scanning file %s\n", arg);
+#endif
 
-        if (!ret)
+        if (ret <= 0)
                 goto exit_file_scan;
 
+        /* Scanned file matches a known virus pattern */
         new_name = (char *)malloc(strlen(arg) + 6);
 
         if (!new_name) {
+#ifdef DEBUG
                 fprintf(stderr, "Memory alloc failed\n");
+#endif
                 ret = -ENOMEM;
                 goto exit_file_scan;
         }
 
         if (chmod(arg, 0) != 0) {
+#ifdef DEBUG
                 fprintf(stderr, "Chmod failed\n");
+#endif
                 ret = -errno;
                 goto exit_file_scan;
         }
@@ -235,14 +249,18 @@ int file_scan(char *arg)
 
         if (rename(arg, new_name) != 0) {
                 ret = -errno;
+#ifdef DEBUG
                 fprintf(stderr, "Renaming of %s failed\n", arg);
+#endif
                 goto exit_file_scan;
         }
 
         ret = insItem(arg, strlen(arg));
 
         if (ret) {
+#ifdef DEBUG
                 fprintf(stderr, "Insertion into qlist error\n");
+#endif
                 ret = -ENOMEM;
         }
 exit_file_scan:
@@ -267,6 +285,7 @@ int dir_scan(char *arg)
                 goto exit_dir_scan;
         }
 
+        /* Create path to current file/dir */
         dir_path = (char *)malloc(strlen(arg) + 1);
 
         if (!dir_path) {
@@ -279,6 +298,10 @@ int dir_scan(char *arg)
         dir_path[strlen(arg)] = '\0';
         prev_size = strlen(dir_path);
 
+        /* Iterate through directory contents and add to
+         * and remove from the created directory path as
+         * needed
+         */
         while ((entry = readdir(dir))) {
                 if (strcmp(entry->d_name, ".") == 0 || strcmp(entry->d_name, "..") == 0)
                         continue;
@@ -292,7 +315,9 @@ int dir_scan(char *arg)
 
                 if (!dir_path) {
                         ret = -ENOMEM;
+#ifdef DEBUG
                         fprintf(stderr, "Directory name memalloc failed\n");
+#endif
                 }
 
                 dir_path[prev_size] = '/';
@@ -325,11 +350,11 @@ exit_dir_scan:
  */
 int antivirus_scan(char *arg)
 {
-        /* All Good - Scan the provided args */
         struct stat stat_buf;
         int file_type;
         int ret = 0, msg_ret = 0;
 
+        /* Validate input argument */
         if (stat(arg, &stat_buf) != 0) {
                 ret = -errno;
                 fprintf(stderr, "Stat failed\n");
@@ -372,15 +397,27 @@ int main(int argc, char *argv[])
                  * Plugin in C API from Barani that will internally
                  * issue SQL DB update transaction
                  */
+#ifdef DEBUG
+                printf("Update antivirus definitions\n");
+#endif
 		ret = update_structures();
-                printf("Update defs\n");
+
+#ifdef DEBUG
+                if (ret == -1)
+                        fprintf(stderr, "Antivirus update failed\n");
+                else
+                        printf("Update success\n");
+#endif
         } else if (strcmp(argv[1], "?") == 0) {
                 print_help(argv[0]);
         } else if (access(argv[1], F_OK) != 0) {
                 ret = -errno;
+#ifdef DEBUG
                 fprintf(stderr, "No such file/directory\n");
+#endif
                 goto exit_antivirus;
         } else {
+                /* All Good - Scan the provided args */
                 ret = antivirus_scan(argv[1]);    
         }
 exit_antivirus:

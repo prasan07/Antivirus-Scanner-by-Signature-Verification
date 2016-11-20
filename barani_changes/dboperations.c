@@ -112,12 +112,22 @@ int update_structures(){
                 retval = -1;
                 goto out;
 	}
-	if (mysql_query(conn, "delete from whitelist where hash_id = 1")) {
+	if (mysql_query(conn, "drop table whitelist")) {
                 fprintf(stderr, "%s\n", mysql_error(conn));
                 retval = -1;
                 goto out;
         }
-        if (mysql_query(conn, "delete from blacklist where signature_id = 1")) {
+        if (mysql_query(conn, "drop table blacklist")) {
+                fprintf(stderr, "%s\n", mysql_error(conn));
+                retval = -1;
+                goto out;
+        }
+        if (mysql_query(conn, "create table blacklist(signature_id int primary_key, signature varchar(65000))")) {
+                fprintf(stderr, "%s\n", mysql_error(conn));
+                retval = -1;
+                goto out;
+        }
+        if (mysql_query(conn, "create table whitelist(hash_id int primary_key, hash varchar(65000))")) {
                 fprintf(stderr, "%s\n", mysql_error(conn));
                 retval = -1;
                 goto out;
