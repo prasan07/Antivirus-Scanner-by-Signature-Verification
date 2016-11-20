@@ -30,7 +30,7 @@ int blacklist_scan(char* file_path){
 	}
 	else if( ret == 1){
 #ifdef DEBUG
-		fprintf(stdout, "File %s is in whitelist ",filepath);
+		fprintf(stdout, "File %s is in whitelist ",file_path);
 #endif
 		ret = 0;
 		goto exit_fn;
@@ -38,14 +38,14 @@ int blacklist_scan(char* file_path){
                 f = fopen(file_path, "rb");
                 if(!f){
 #ifdef ERR
-                        perror(f);
+                        perror(file_path);
 #endif
                         ret = -1;
                         goto exit_fn;
                 }
                 if(stat(file_path,&st) < 0){
 #ifdef ERR
-                        perror(f);
+                        perror(file_path);
 #endif
                         ret = -1;
                         goto exit_fn;
