@@ -1,6 +1,14 @@
 #include "blacklist.h"
 
 
+/* 
+This function checks if the given file is a virus 
+by scanning for blacklist signatures 
+param 	- A file path
+retrun	- 1 if virus
+	  0 if not virus
+	 -1 if scan error
+*/
 int blacklist_scan(char* file_path){
 
 	int ret = 0;
@@ -50,7 +58,7 @@ int blacklist_scan(char* file_path){
 		goto exit_fn;
 	}
 	else{
-
+	/* Call made to DB API to get the complete up-to date blacklist */
 		blacklist = getStructures();
 		fseek(f, 0, SEEK_END);
 		long fsize = ftell(f);
@@ -84,7 +92,7 @@ int blacklist_scan(char* file_path){
 			copy_ptr += sprintf(copyfb_ptr, "%02X", *(buf+i));
 			}*/
 		
-			for(i = 0; i < blacklist->sig_count; i++){
+			for(i = 1; i <= blacklist->sig_count; i++){
 				signature = blacklist->signatures + next_pos;
 				if(strstr(file_bytes, signature) != NULL){
 					ret = 1;
