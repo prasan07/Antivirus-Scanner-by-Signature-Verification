@@ -10,10 +10,10 @@
 #define PASS "criminalminds"
 #define DATABASE "cse509"
 
-struct signatures{
+typedef struct signatures{
 unsigned int sig_count;
 unsigned char * signatures;
-};
+}blacklist_from_db;
 
 //Method to retrieve the sha256 hash of the file given the path
 extern char* getsha256(char * file_path);

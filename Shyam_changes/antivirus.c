@@ -6,7 +6,7 @@
 #include <errno.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-
+#include "blacklist.h"
 /* Stack used in recursive directory scans
  * to save the index of the file path from where
  * next scan file/dir name needs to be appended
@@ -207,9 +207,7 @@ int file_scan(char *arg)
         int ret = 1;
         char *new_name = NULL;
 
-        /* Call whitelist function */
-
-        /* Call Blacklist function if not in whitelist */
+        ret = blacklist_scan(arg);
 
         printf("========> Scanning file %s\n", arg);
 
