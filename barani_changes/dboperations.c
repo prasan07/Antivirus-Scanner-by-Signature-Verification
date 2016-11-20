@@ -122,12 +122,12 @@ int update_structures(){
                 retval = -1;
                 goto out;
         }
-        if (mysql_query(conn, "create table blacklist(signature_id int primary_key, signature varchar(65000))")) {
+        if (mysql_query(conn, "create table blacklist(signature_id int primary key, signature varchar(65000))")) {
                 fprintf(stderr, "%s\n", mysql_error(conn));
                 retval = -1;
                 goto out;
         }
-        if (mysql_query(conn, "create table whitelist(hash_id int primary_key, hash varchar(65000))")) {
+        if (mysql_query(conn, "create table whitelist(hash_id int primary key, hash varchar(65000))")) {
                 fprintf(stderr, "%s\n", mysql_error(conn));
                 retval = -1;
                 goto out;
@@ -215,9 +215,11 @@ int isWhitelisted(char * file_path){
         }
 	/*retrieve hash of the given file*/
 	hash_val = getsha256(file_path);
-	printf("%s \n", hash_val);	
-	sprintf(query, "select * from whitelist where hash = '%s'", hash_val);
+        sprintf(query, "select * from whitelist where hash = '%s'", hash_val);
+#ifdef DEBUG
+	printf("%s \n", hash_val);
 	printf("%s \n", query);
+#endif
 	/*check for the hash in the whitelist table*/
 	if (mysql_query(conn, query)) {
                 fprintf(stderr, "%s\n", mysql_error(conn));

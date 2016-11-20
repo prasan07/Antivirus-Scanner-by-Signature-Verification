@@ -368,7 +368,7 @@ int antivirus_scan(char *arg)
         else
                 ret = file_scan(arg);
 
-        if (ret < 0)
+        if (ret <= 0)
                 goto exit_antivirus;
 
         msg_ret = printMsgBox();
