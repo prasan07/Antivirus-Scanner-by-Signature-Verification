@@ -1,11 +1,11 @@
 #include "blacklist.h"
-
+#include "dbutility.h"
 
 /* 
 This function checks if the given file is a virus 
 by scanning for blacklist signatures 
 param 	- A file path
-retrun	- 1 if virus
+return	- 1 if virus
 	  0 if not virus
 	 -1 if scan error
 */
@@ -28,14 +28,14 @@ int blacklist_scan(char* file_path){
 		ret = -1;
 		goto exit_fn;
 	}
-	if(stat(f,&st) < 0){
+	if(stat(file_path,&st) < 0){
 #ifdef ERR
 		perror(f);
 #endif
 		ret = -1;
 		goto exit_fn;
 	}
-	if((st.st_mode & IS_EXEC) == 0){
+	if((st.st_mode & S_IEXEC) == 0){
 #ifdef DEBUG
 		fprintf(stdout, "%s is not an executable file ",file_path);
 #endif
@@ -59,7 +59,7 @@ int blacklist_scan(char* file_path){
 	}
 	else{
 	/* Call made to DB API to get the complete up-to date blacklist */
-		blacklist = getStructures();
+		blacklist = getstructures();
 		fseek(f, 0, SEEK_END);
 		long fsize = ftell(f);
 		fseek(f, 0, SEEK_SET);

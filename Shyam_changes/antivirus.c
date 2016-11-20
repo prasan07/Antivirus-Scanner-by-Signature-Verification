@@ -7,6 +7,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include "blacklist.h"
+#include "dbutility.h"
 /* Stack used in recursive directory scans
  * to save the index of the file path from where
  * next scan file/dir name needs to be appended
@@ -371,6 +372,7 @@ int main(int argc, char *argv[])
                  * Plugin in C API from Barani that will internally
                  * issue SQL DB update transaction
                  */
+		ret = update_structures();
                 printf("Update defs\n");
         } else if (strcmp(argv[1], "?") == 0) {
                 print_help(argv[0]);
