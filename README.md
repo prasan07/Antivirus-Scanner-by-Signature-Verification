@@ -40,16 +40,17 @@ files - Can be used during tests if needed
 
 					COMPLETED WORK
 User space application
+The DB-update API must be plugged into the space provided in the main() function.
+
+The blacklist and whitelist logic must be plugged into the space provided in the 
+file_scan() function.
 
 					PENDING WORK
 Kernel interception for open syscall has been coded. Will test today to see if it works.
 Will also test invocation of user space application.
 Will then check for other syscalls like exec, execv, execlv etc.
 
-The DB-update API must be plugged into the space provided in the main() function.
-
-The blacklist and whitelist logic must be plugged into the space provided in the 
-file_scan() function.
+***Testing and input data for the black/white lists***
 
 Error reporting from user space app must be checked to see as to what happens if the kernel 	   invokes it.
 
