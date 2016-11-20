@@ -1,4 +1,6 @@
 #include "blacklist.h"
+#include <fcntl.h>
+#include <sys/types.h>
 #include "dbutility.h"
 
 /* 
@@ -17,8 +19,9 @@ int blacklist_scan(char* file_path){
 	int next_pos = 0;
 	unsigned char* file_bytes = NULL;
 	int i;
-	FILE *f = NULL;
-	struct stat st;
+	int f = -1;
+        struct stat st;
+        size_t fsize = 0;
 
 	/* Perform whitelist validation, call made to DB API " */
 	ret = isWhitelisted(file_path);
@@ -35,11 +38,13 @@ int blacklist_scan(char* file_path){
 		ret = 0;
 		goto exit_fn;
         } else {
-                f = fopen(file_path, "rb");
-                if(!f){
+                printf("%s -- \n", file_path);
+                f = open(file_path, O_RDONLY, 0);
+                if(f < 0){
 #ifdef ERR
-                        perror(f);
+                        perror("");
 #endif
+                        printf("Sdsdsd\n");
                         ret = -1;
                         goto exit_fn;
                 }
@@ -47,6 +52,7 @@ int blacklist_scan(char* file_path){
 #ifdef ERR
                         perror(f);
 #endif
+                        printf("Sdsdsd -- 1\n");
                         ret = -1;
                         goto exit_fn;
                 }
@@ -54,26 +60,25 @@ int blacklist_scan(char* file_path){
 #ifdef DEBUG
                         fprintf(stdout, "%s is not an executable file ",file_path);
 #endif
+                        printf("Sdsdsd -- 2\n");
                         ret = 0;
                         goto exit_fn;
                 }
                 /* Call made to DB API to get the complete up-to date blacklist */
                 blacklist = getstructures();
-                fseek(f, 0, SEEK_END);
-                long fsize = ftell(f);
-                fseek(f, 0, SEEK_SET);
-
+                fsize = st.st_size;
                 file_bytes = malloc(fsize+1);
                 // Malloc fail add here
 
-                i = fread(file_bytes, 1, fsize, f);
+                i = read(f, file_bytes, fsize);
                 *(file_bytes + fsize) = '\0';
+                printf("=====> file size = %ld %d\n", fsize, i);
 
                 if(i < 0){
 #ifdef ERR	
                         fprintf(stderr,"File read error");
 #endif
-                        fclose(f);
+                        close(f);
                         goto exit_fn;
                 }
                 else if(i < fsize){
@@ -81,7 +86,7 @@ int blacklist_scan(char* file_path){
                         fprintf(stdout, "Only partial file read of %s ",file_path);
 #endif
                         ret = -1;
-                        fclose(f);
+                        close(f);
                         goto exit_fn;
                 }
                 else{		
@@ -94,15 +99,33 @@ int blacklist_scan(char* file_path){
                          }*/
 
                         for(i = 1; i <= blacklist->sig_count; i++){
+                                int j = 0;
                                 signature = blacklist->signatures + next_pos;
+                                #if 0
+                                printf("%s %ld ---- %s\n", file_bytes, strlen(file_bytes), signature);
                                 if(strstr(file_bytes, signature) != NULL){
                                         ret = 1;
 #ifdef DEBUG
                                         fprintf(stdout, "%s is a virus ",file_path);
 #endif
-                                        fclose(f);
                                         goto exit_fn;
                                 }
+                                #endif
+                                for (j = 0; j < (fsize - strlen(signature - 1)); j++) {
+                                        #if 0
+                                        char *temp = malloc(strlen(signature) + 1);
+                                        memcpy(temp, file_bytes + j, strlen(signature));
+                                        temp[strlen(signature)] = '\0';
+                                        
+                                        printf("===> Read string %s\n", temp);
+                                        #endif
+                                        if (memcmp(file_bytes + j, signature, strlen(signature)) == 0) {
+                                                printf("===> detected\n");
+                                                ret = 1;
+                                                goto exit_fn;
+                                        }
+                                }
+
                                 next_pos += 1 + strlen(signature);
 
                         }
@@ -114,7 +137,7 @@ int blacklist_scan(char* file_path){
 #ifdef DEBUF
 	fprintf(stdout, "%s is not a virus ",file_path);
 #endif
-	fclose(f);
+	close(f);
 	exit_fn:
 		return ret;
 }

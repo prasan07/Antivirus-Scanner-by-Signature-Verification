@@ -121,6 +121,11 @@ int insItem(char *file_name, int name_size)
                         ret = 0;
                 }
         }
+        if (ret) {
+                printf("%s not inserted\n", file_name);
+        } else {
+                printf("inserted %s\n", file_name);
+        }
         return ret;
 }
 
@@ -190,7 +195,7 @@ int printMsgBox(void)
                 goto exit_printMsgBox;
         }
 
-        strcat(xmessage, command);
+        strcpy(xmessage, command);
         iter = head;
 
         while (iter) {
@@ -212,7 +217,7 @@ exit_printMsgBox:
  */
 int file_scan(char *arg)
 {
-        int ret = 1;
+        int ret = 1, qlist_ret = 0;
         char *new_name = NULL;
 
         ret = blacklist_scan(arg);
@@ -255,9 +260,9 @@ int file_scan(char *arg)
                 goto exit_file_scan;
         }
 
-        ret = insItem(arg, strlen(arg));
+        qlist_ret = insItem(arg, strlen(arg));
 
-        if (ret) {
+        if (qlist_ret) {
 #ifdef DEBUG
                 fprintf(stderr, "Insertion into qlist error\n");
 #endif
