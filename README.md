@@ -68,3 +68,8 @@ grant all privileges on cse509.* to 'username'@'%' identified by 'passphrase';
 
 gcc command to compile with the libraries:
 gcc -o operations dboperations.c getSha256.c `mysql_config --cflags --libs` -lssl -lcrypto
+
+Need to cover the case where the db and the tables do not exist - 
+In that case - first create the db and tables and call updatestructures()
+
+Also, modified updatestructures to drop tables and create it again - may be overkill but helps when the table does not exist - can be changed when the check and create db and tables logic is added
