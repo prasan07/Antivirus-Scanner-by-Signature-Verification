@@ -1,5 +1,5 @@
 #include "blacklist.h"
-#include "dbutility.h"
+
 
 int blacklist_scan(char* file_path){
 
@@ -10,7 +10,30 @@ int blacklist_scan(char* file_path){
 	unsigned char* file_bytes = NULL;
 	int i;
 	FILE *f = NULL;
+	struct stat st;
 
+	f = fopen(file_path, "rb");
+	if(!f){
+#ifdef ERR
+		perror(f);
+#endif
+		ret = -1;
+		goto exit_fn;
+	}
+	if(stat(f,&st) < 0){
+#ifdef ERR
+		perror(f);
+#endif
+		ret = -1;
+		goto exit_fn;
+	}
+	if((st.st_mode & IS_EXEC) == 0){
+#ifdef DEBUG
+		fprintf(stdout, "%s is not an executable file ",file_path);
+#endif
+		ret = 0;
+		goto exit_fn;
+	}
 	/* Perform whitelist validation, call made to DB API " */
 	ret = isWhitelisted(file_path);
 	if( ret < 1){
@@ -28,14 +51,7 @@ int blacklist_scan(char* file_path){
 	}
 	else{
 
-		blacklist = getstructures();
-		
-		f = fopen(file_path, "rb");
-		if(!f){
-#ifdef ERR
-		perror(f);
-#endif
-		}
+		blacklist = getStructures();
 		fseek(f, 0, SEEK_END);
 		long fsize = ftell(f);
 		fseek(f, 0, SEEK_SET);
@@ -78,7 +94,7 @@ int blacklist_scan(char* file_path){
 					fclose(f);
 					goto exit_fn;
 				}
-				next_pos += next_pos + strlen(signature);
+				next_pos += 1 + strlen(signature);
 
 			}
 		}
