@@ -256,7 +256,7 @@ exit_file_scan:
  */
 int dir_scan(char *arg)
 {
-        int ret = 0;
+        int ret = 0, scan_ret = 0;
         DIR *dir;
         struct dirent *entry;
         char *dir_path = NULL;
@@ -301,15 +301,17 @@ int dir_scan(char *arg)
                 strcat(dir_path, entry->d_name);
 
                 if (entry->d_type == DT_DIR)
-                        ret = dir_scan(dir_path);
+                        scan_ret = dir_scan(dir_path);
                 else
-                        ret = file_scan(dir_path);
+                        scan_ret = file_scan(dir_path);
+
+                if (scan_ret != 0)
+                        ret = scan_ret;
 
                 if (ret < 0)
                         break;
 
                 prev_size = pop();
-
         }
 exit_dir_scan:
         free(dir_path);
@@ -327,7 +329,7 @@ int antivirus_scan(char *arg)
         /* All Good - Scan the provided args */
         struct stat stat_buf;
         int file_type;
-        int ret = 0;
+        int ret = 0, msg_ret = 0;
 
         if (stat(arg, &stat_buf) != 0) {
                 ret = -errno;
@@ -345,7 +347,11 @@ int antivirus_scan(char *arg)
         if (ret < 0)
                 goto exit_antivirus;
 
-        ret = printMsgBox();
+        msg_ret = printMsgBox();
+
+        if (msg_ret < 0)
+                ret = msg_ret;
+
 exit_antivirus:
         clearStack();
         delList();
