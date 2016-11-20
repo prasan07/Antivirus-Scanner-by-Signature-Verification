@@ -40,16 +40,17 @@ files - Can be used during tests if needed
 
 					COMPLETED WORK
 User space application
+The DB-update API must be plugged into the space provided in the main() function.
+
+The blacklist and whitelist logic must be plugged into the space provided in the 
+file_scan() function.
 
 					PENDING WORK
 Kernel interception for open syscall has been coded. Will test today to see if it works.
 Will also test invocation of user space application.
 Will then check for other syscalls like exec, execv, execlv etc.
 
-The DB-update API must be plugged into the space provided in the main() function.
-
-The blacklist and whitelist logic must be plugged into the space provided in the 
-file_scan() function.
+***Testing and input data for the black/white lists***
 
 Error reporting from user space app must be checked to see as to what happens if the kernel 	   invokes it.
 
@@ -68,3 +69,8 @@ grant all privileges on cse509.* to 'username'@'%' identified by 'passphrase';
 
 gcc command to compile with the libraries:
 gcc -o operations dboperations.c getSha256.c `mysql_config --cflags --libs` -lssl -lcrypto
+
+**Need to cover the case where the db and the tables do not exist - 
+In that case - first create the db and tables and call updatestructures()**
+
+**Also, modified updatestructures to drop tables and create it again - may be overkill but helps when the table does not exist - can be changed when the check and create db and tables logic is added**

@@ -33,7 +33,7 @@ int blacklist_scan(char* file_path){
 	}
 	else if( ret == 1){
 #ifdef DEBUG
-		fprintf(stdout, "File %s is in whitelist ",filepath);
+		fprintf(stdout, "File %s is in whitelist ",file_path);
 #endif
 		ret = 0;
 		goto exit_fn;
@@ -42,17 +42,15 @@ int blacklist_scan(char* file_path){
                 f = open(file_path, O_RDONLY, 0);
                 if(f < 0){
 #ifdef ERR
-                        perror("");
+                        perror(file_path);
 #endif
-                        printf("Sdsdsd\n");
                         ret = -1;
                         goto exit_fn;
                 }
                 if(stat(file_path,&st) < 0){
 #ifdef ERR
-                        perror(f);
+                        perror(file_path);
 #endif
-                        printf("Sdsdsd -- 1\n");
                         ret = -1;
                         goto exit_fn;
                 }
@@ -60,7 +58,6 @@ int blacklist_scan(char* file_path){
 #ifdef DEBUG
                         fprintf(stdout, "%s is not an executable file ",file_path);
 #endif
-                        printf("Sdsdsd -- 2\n");
                         ret = 0;
                         goto exit_fn;
                 }
