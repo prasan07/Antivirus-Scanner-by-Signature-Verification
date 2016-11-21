@@ -1,0 +1,131 @@
+This README describes the Antivirus Course Projectt of Fall 2016 CSE509 Systems Security course at
+Stony Brook University.
+
+Contributors: 
+
+Arun Ramachandran (aruramachand@cs.stonybrook.edu, <enter SBU ID>)
+Gangabarani Balakrishnan (gbalakrishna@cs.stonybrook.edu, <enter SBU ID>)
+Prasanth Sridhar (prsridhar@cs.stonybrook.edu, <enter SBU ID>)
+Shyam Sundar Chandrasekaran (shychandrase@cs.stonybrook.edu, 110815338)
+---------------------------------------------------------------------------------------------------
+
+DESCRIPTION:
+
+A "simple" antivirus scanner that supports updates over the Internet. 
+
+The antivirus contains a list of known harmless programs - a whitelist - and a known malware
+signature list - a blacklist - and detects malware based on signatures of malicious programs. 
+
+Any detected malicious program is quarantined by removing its permissions and appending a ".virus"
+suffix to the name. User is appropriately notified of this via an alert message box.
+
+The antivirus runs in two scanning modes:
+
+        i) On Demand Scanning:
+           In On Demand scanning, the user can run a program to scan a file, or a directory
+           containing files, e.g. antivirus-scan /home/jack/Downloads.
+
+        ii) On Access Scanning:
+           In On Access scanning, in order to protect the user, a kernel driver hooks into the
+           appropriate system calls (e.g. open, execl, execlp, execle, execv, execvp, execvpe) and
+           scans the file before it is opened. If the file is a virus, then the antivirus
+           refuses to open the file.
+
+Details of usage can be found in the "INSTRUCTIONS" section.
+----------------------------------------------------------------------------------------------------
+
+DESIGN DECISIONS:
+
+In this section, we describe the various design decisions that we undertook for the project.
+
+<Add about DB - Barani>
+<Add about Kernel Driver - Arun>
+<Add about Comparison - Prasanth>
+
+Antivirus Userspace executable:
+
+For the antivirus userspace application, we store the list of files that have been flagged as mali-
+cious programs within a linked list where each list entry contains path to the malicious file.
+
+This list is used to show to the user the files that have been quarantined - displayed via xmessage
+that displays it in a message box.
+
+we decided to add recursive traversal of subdirectories and files so as to scan all the contents
+within a directory.
+So, to keep track of the current directory namespace, we maintain a stack that stores the index,
+within the namespace, the location where the next directory name/file names needs to be added to
+
+The antivirus also supports scanning on softlinks - if a linked file is detected as a virus, its
+permissions are removed but the link to it is renamed with a ".virus" added at the end of the link
+name.
+
+For updating the virus database definitions, the antivirus makes use of the updateStructures()
+described above.
+----------------------------------------------------------------------------------------------------
+
+INSTRUCTIONS:
+
+Our antivirus works with *nix machines.
+
+We have provided a Makefile that can be used to build our antivirus as follows:
+
+        i) Download the source from <link>
+
+        ii) Extract the source files and use the following commands:
+                
+                make - To compile all the antivirus source code
+
+                make clean - clean up
+
+The antivirus can run in two modes (described in the "DESCRIPTION" section) - On Demand and On Access
+
+        i) For On Demand scanning of files or to update the antivirus definitions from remote repo:
+
+                ./antivirus (-u|path to file/directory)
+
+                Description of arguments:
+                -u                      - Update database definitions
+                path to file/directory  - Path of file/directory to scan
+
+        ii) For On Access scanning,
+
+                <Fill in the details>
+
+The antivirus uses a MySQL DB backend to store virus definitions that are used in scans. So, MySQL
+should be installed on the user machine for the antivirus software to be fully effective.
+
+MySQL installation guide can be found at:
+        https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-14-04
+
+In order to update virus definitions, we had to add firewall whitelisting and grant privileges on
+the remote MySQL DB as follows:
+
+/sbin/iptables -A INPUT -i <interface> -p tcp --destination-port 3306 -j ACCEPT
+
+grant all privileges on "database.tables" to 'username'@'%' identified by 'passphrase'
+----------------------------------------------------------------------------------------------------
+
+MAIN FILES:
+
+The details of the antivirus source files are as follows:
+
+REPORT            -     Project Report      
+antivirus.c       -     Code for the antivirus userspace executable
+<Guys add details of .c and .h files here>
+----------------------------------------------------------------------------------------------------
+
+TESTING:
+
+
+----------------------------------------------------------------------------------------------------
+
+REFERENCES:
+
+stackoverflow.com and linux man pages have been invaluable references.
+
+We also used the following references to use mysql apis with C programs and invoking user space
+applications from the kernel:
+
+<Add references used by barani and arun>
+----------------------------------------------------------------------------------------------------
+
