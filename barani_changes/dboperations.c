@@ -171,6 +171,16 @@ int update_structures(){
                 retval = -1;
                 goto out;
 	}
+	if(mysql_query(conn, "delete from whitelist")){
+                fprintf(stderr, "%s\n", mysql_error(conn));
+                retval = -1;
+                goto out;
+        }
+	if(mysql_query(conn, "delete from blacklist")){
+                fprintf(stderr, "%s\n", mysql_error(conn));
+                retval = -1;
+                goto out;
+        }
 	// Connect to remote database 
 	remote_conn = mysql_init(NULL);
         if (!mysql_real_connect(remote_conn, REMOTE_LOC,
