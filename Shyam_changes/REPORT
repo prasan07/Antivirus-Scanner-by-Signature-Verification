@@ -1,5 +1,5 @@
-This README describes the Antivirus Course Projectt of Fall 2016 CSE509 Systems Security course at
-Stony Brook University.
+This README describes the Antivirus Course Project of the Fall 2016 CSE509 Systems Security course
+at Stony Brook University.
 
 Contributors: 
 
@@ -123,6 +123,7 @@ REFERENCES:
 
 stackoverflow.com and linux man pages have been invaluable references.
 
+<Add references used by Prasanth>
 We also used the following references to use mysql apis with C programs and invoking user space
 applications from the kernel:
 
