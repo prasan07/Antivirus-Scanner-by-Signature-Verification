@@ -121,11 +121,6 @@ int insItem(char *file_name, int name_size)
                         ret = 0;
                 }
         }
-        if (ret) {
-                printf("%s not inserted\n", file_name);
-        } else {
-                printf("inserted %s\n", file_name);
-        }
         return ret;
 }
 

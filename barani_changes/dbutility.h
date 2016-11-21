@@ -12,7 +12,7 @@
 
 typedef struct signatures{
 unsigned int sig_count;
-unsigned char * signatures;
+char * signatures;
 }blacklist_from_db;
 
 //Method to retrieve the sha256 hash of the file given the path

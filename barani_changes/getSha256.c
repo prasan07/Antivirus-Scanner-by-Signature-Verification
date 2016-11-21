@@ -8,7 +8,7 @@ int generate_sha256(char* file_path, unsigned char* hashed_string)
 {
         FILE* file = fopen(file_path, "r");
         SHA256_CTX sha;
-        unsigned char* file_buffer = (char *)malloc(PAGE_SIZE);
+        char* file_buffer = (char *)malloc(PAGE_SIZE);
         int bytesRead = 0;
         if(!file){
                 printf("Unable to retrieve file\n");

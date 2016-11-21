@@ -38,7 +38,6 @@ int blacklist_scan(char* file_path){
 		ret = 0;
 		goto exit_fn;
         } else {
-                printf("%s -- \n", file_path);
                 f = open(file_path, O_RDONLY, 0);
                 if(f < 0){
 #ifdef ERR
@@ -69,7 +68,6 @@ int blacklist_scan(char* file_path){
 
                 i = read(f, file_bytes, fsize);
                 *(file_bytes + fsize) = '\0';
-                printf("=====> file size = %ld %d\n", fsize, i);
 
                 if(i < 0){
 #ifdef ERR	
@@ -117,7 +115,6 @@ int blacklist_scan(char* file_path){
                                         printf("===> Read string %s\n", temp);
                                         #endif
                                         if (memcmp(file_bytes + j, signature, strlen(signature)) == 0) {
-                                                printf("===> detected\n");
                                                 ret = 1;
                                                 goto exit_fn;
                                         }

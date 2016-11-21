@@ -145,8 +145,7 @@ return value 	: 1 on success, -1 on failure
 parameters 	: none
 */
 int update_structures(){
-	unsigned int max_hash_id = 0, max_signature_id = 0;
-	char query[300], insert_query[65100];
+	char insert_query[65100];
         MYSQL_RES *res = NULL;
         MYSQL_ROW row;
 	MYSQL *conn = NULL;
