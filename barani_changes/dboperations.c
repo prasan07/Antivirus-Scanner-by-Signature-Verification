@@ -28,6 +28,41 @@ void db_close(){
 }*/
 
 /*
+function        : method to check if the tables are present or create them
+return value    : returns 0 on success, -1 on failure to create tables
+parameters      : MYSQL connection object
+*/
+int verify_tables(MYSQL *conn){
+	char query[300];
+	MYSQL_RES *res;
+        sprintf(query,"SELECT * FROM information_schema.tables WHERE table_schema = '%s' AND table_name = 'whitelist' LIMIT 1", DATABASE);
+        if (mysql_query(conn, query)) {
+                fprintf(stderr, "%s\n", mysql_error(conn));
+                return -1;
+        }
+        res = mysql_store_result(conn);
+        if(mysql_num_rows(res)==0){
+                if (mysql_query(conn, "create table whitelist(hash_id int primary key, hash varchar(65))")) {
+                        fprintf(stderr, "%s\n", mysql_error(conn));
+                	return -1;
+		}
+        }
+        sprintf(query,"SELECT * FROM information_schema.tables WHERE table_schema = '%s' AND table_name = 'blacklist' LIMIT 1", DATABASE);
+        if (mysql_query(conn, query)) {
+                fprintf(stderr, "%s\n", mysql_error(conn));
+                return -1;
+        }
+        res = mysql_store_result(conn);
+        if(mysql_num_rows(res)==0){
+                if (mysql_query(conn, "create table blacklist(signature_id int primary key, signature varchar(65000))")) {
+                        fprintf(stderr, "%s\n", mysql_error(conn));
+                        return -1;
+                }
+        }
+	return 0;
+}
+
+/*
 function 	: method to retrieve the list of virus signatures
 return value 	: returns a struct signatures list which contains all the blacklisted signatures in the db.
 parameters 	: none
@@ -37,9 +72,13 @@ struct signatures *getstructures(){
 	int total_length = 0;
 	int current_loc = 0;
 	struct signatures* result = (struct signatures *) malloc(sizeof(struct signatures));	
-	MYSQL *conn;
-	MYSQL_RES *res;
+	MYSQL *conn= NULL;
+	MYSQL_RES *res =NULL;
 	MYSQL_ROW row;
+	if(result == NULL){
+		printf("Unable to allocate memory\n");
+		goto out;
+	}
 
 	conn = mysql_init(NULL);
         /* Connect to the local database */
@@ -47,20 +86,28 @@ struct signatures *getstructures(){
                                 USER, PASS, DATABASE, 0, NULL, 0)) {
                 fprintf(stderr, "%s\n", mysql_error(conn));
 		free(result);
-                return NULL;
+                result = NULL;
+		goto out;
         }
-	
+	//verify that the tables are present else create them
+        if(verify_tables(conn)!=0){
+		free(result);
+                result = NULL;
+		goto out;
+        }
 	/* execute SQL query */
         if (mysql_query(conn, "select * from blacklist")) {
                 fprintf(stderr, "%s\n", mysql_error(conn));
 		free(result);
-                return NULL;
+                result = NULL;
+		goto out;
 	}
 	res = mysql_store_result(conn);
 	if (res == NULL)
 	{	
 		free(result);
-		return NULL;
+		result = NULL;
+		goto out;
 	}
 	/* find the total size of the strings in the table */
 	while ((row = mysql_fetch_row(res)))
@@ -69,6 +116,10 @@ struct signatures *getstructures(){
                 row_count++;
 	}
 	result->signatures = (char *) malloc(total_length);
+	if(result->signatures ==NULL){
+		printf("Unable to allocate memory\n");
+		goto out;
+	}
 	result->sig_count = row_count;
 	mysql_data_seek(res, 0);
 	/*copy the strings in the structure one by one*/
@@ -79,9 +130,12 @@ struct signatures *getstructures(){
                 result->signatures[current_loc] = '\0';
                 current_loc++;
 	}
+out:
 	/*perform clean up and exit*/
-	mysql_free_result(res);
-	mysql_close(conn);
+	if(res!=NULL)
+		mysql_free_result(res);
+	if(conn!=NULL)
+		mysql_close(conn);
 	return result;
 }
 
@@ -93,51 +147,35 @@ parameters 	: none
 int update_structures(){
 	unsigned int max_hash_id = 0, max_signature_id = 0;
 	char query[300], insert_query[65100];
-        MYSQL_RES *res;
+        MYSQL_RES *res = NULL;
         MYSQL_ROW row;
-	MYSQL *conn;
+	MYSQL *conn = NULL;
         MYSQL *remote_conn;
 	int retval = 0;
 
         conn = mysql_init(NULL);
-        /* Connect to local database */
+        // Connect to local database 
         if (!mysql_real_connect(conn, SERVER_LOC,
                                 USER, PASS, DATABASE, 0, NULL, 0)) {
                 fprintf(stderr, "%s\n", mysql_error(conn));
                 retval = -1;
 		goto out;
         }
+	//verify that the tables are present else create them
+	if(verify_tables(conn)!=0){
+		retval = -1;
+		goto out;	
+	}
 	if(mysql_query(conn, "START TRANSACTION")){
 		fprintf(stderr, "%s\n", mysql_error(conn));
                 retval = -1;
                 goto out;
 	}
-	if (mysql_query(conn, "drop table whitelist")) {
-                fprintf(stderr, "%s\n", mysql_error(conn));
-                retval = -1;
-                goto out;
-        }
-        if (mysql_query(conn, "drop table blacklist")) {
-                fprintf(stderr, "%s\n", mysql_error(conn));
-                retval = -1;
-                goto out;
-        }
-        if (mysql_query(conn, "create table blacklist(signature_id int primary key, signature varchar(65000))")) {
-                fprintf(stderr, "%s\n", mysql_error(conn));
-                retval = -1;
-                goto out;
-        }
-        if (mysql_query(conn, "create table whitelist(hash_id int primary key, hash varchar(65000))")) {
-                fprintf(stderr, "%s\n", mysql_error(conn));
-                retval = -1;
-                goto out;
-        }
-	// Connect to remote database */
+	// Connect to remote database 
 	remote_conn = mysql_init(NULL);
         if (!mysql_real_connect(remote_conn, REMOTE_LOC,
                                 REMOTE_USER, PASS, DATABASE, 3306, NULL, 0)) {
-                //fprintf(stderr, "%s\n", mysql_error(conn));
-		perror("error!!");
+                fprintf(stderr, "%s\n", mysql_error(conn));
 		printf("connection failed!!!");
                 retval = -1;
 		goto out;
@@ -186,8 +224,10 @@ out:
 		mysql_query(conn, "ROLLBACK");
 		printf("Rolling back DB changes\n");
 	}
-        mysql_free_result(res);
-        mysql_close(conn);
+	if(res!=NULL)
+        	mysql_free_result(res);
+	if(conn!=NULL)
+        	mysql_close(conn);
 	return retval;	
 }
 
@@ -202,16 +242,23 @@ int isWhitelisted(char * file_path){
 	char* hash_val = NULL;
 	char query[300];
 	int result = 0;
-	MYSQL_RES *res;
+	MYSQL_RES *res= NULL;
         MYSQL_ROW row;
-	MYSQL *conn;
+	MYSQL *conn = NULL;
 
         conn = mysql_init(NULL);
         /* Connect to local database */
         if (!mysql_real_connect(conn, SERVER_LOC,
                                 USER, PASS, DATABASE, 0, NULL, 0)) {
                 fprintf(stderr, "%s\n", mysql_error(conn));
-                return -1;
+                result = -1;
+		goto out;
+        }
+	//verify that the tables are present else create them
+        if(verify_tables(conn)!=0){
+		printf("Unable to verify tables\n");
+                result = -1;
+		goto out;
         }
 	/*retrieve hash of the given file*/
 	hash_val = getsha256(file_path);
@@ -223,7 +270,8 @@ int isWhitelisted(char * file_path){
 	/*check for the hash in the whitelist table*/
 	if (mysql_query(conn, query)) {
                 fprintf(stderr, "%s\n", mysql_error(conn));
-                return -1;
+                result = -1;
+		goto out;
         }
         res = mysql_use_result(conn);
 	if((row = mysql_fetch_row(res)) != NULL){
@@ -231,9 +279,12 @@ int isWhitelisted(char * file_path){
         }else{
 		result = 0;
 	}
+out:
 	/*perform clean up and exit*/
-	mysql_free_result(res);
-   	mysql_close(conn);
+	if(res!=NULL)
+		mysql_free_result(res);
+	if(res!=NULL)
+   		mysql_close(conn);
 	return result;
 }
 
@@ -274,5 +325,5 @@ int isWhitelisted(char * file_path){
                 printf("%s \n", data->signatures+next_loc);
                 next_loc+= strlen(data->signatures+next_loc)+1;
         }*/
-	//printf("%d \n", update_structures());	
+//	printf("%d \n", update_structures());	
 //}
