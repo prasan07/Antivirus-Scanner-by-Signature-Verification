@@ -8,7 +8,7 @@ https://confluence.atlassian.com/bitbucket/add-an-ssh-key-to-an-account-30281185
 DESCRIPTION OF WORK TO BE DONE:
 
 1) Blacklist comparison :
-   strcmp of virus signatures with the binary of the file.
+   memcmp of virus signatures with the binary of the file.
    To be done in the user space.
    Remote SQL server must have the dbase of the virus signatures, from which we must periodically 
    retrieve. The dbase must be updatable.
