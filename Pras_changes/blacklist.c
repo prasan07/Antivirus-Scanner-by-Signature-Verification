@@ -5,7 +5,7 @@
 
 /* 
 This function checks if the given file is a virus 
-by scanning for blacklist signatures 
+by scanning for blacklist hex_signatures 
 param 	- A file path
 return	- 1 if virus
 	  0 if not virus
@@ -13,9 +13,12 @@ return	- 1 if virus
 */
 int blacklist_scan(char* file_path){
 
-	int ret = 0;
+	int ret = 0, j=0;
 	blacklist_from_db* blacklist = NULL;
-	char* signature = NULL;
+	char* hex_signature = NULL;
+	char* byte_signature = NULL;
+	char* pos = NULL;
+	char* hex_pos = NULL;
 	int next_pos = 0;
 	unsigned char* file_bytes = NULL;
 	int i;
@@ -92,16 +95,32 @@ int blacklist_scan(char* file_path){
                 else{		
 
                         for(i = 1; i <= blacklist->sig_count; i++){
-                                int j = 0;
-                                signature = blacklist->signatures + next_pos;
-                                for (j = 0; j <= (fsize - strlen(signature)); j++) {
-                                        if (memcmp(file_bytes + j, signature, strlen(signature)) == 0) {
+				/* Get the hex signature string from DB */
+                                hex_signature = blacklist->signatures + next_pos;
+				hex_pos = hex_signature;	
+				byte_signature = malloc(strlen(hex_signature)/2 + 1);
+				pos = byte_signature;
+				/* Convert the hex_signature string to byte array */
+				for(j = 0; j < strlen(hex_signature)/2; j++){
+					sscanf(hex_pos,"%2hhx",pos);				
+					hex_pos += 2;
+					pos += 1;
+					printf("\n%d",j);
+				}	
+				pos = '\0';
+#ifdef TEST
+				printf("\n%s byte sig", byte_signature);
+				printf("\n%s hex sig", hex_signature); 
+       				printf("\n%ld",strlen(byte_signature));                         
+#endif
+				for (j = 0; j <= (fsize - strlen(byte_signature)); j++) {
+                                        if (memcmp(file_bytes + j, byte_signature, strlen(byte_signature)) == 0) {
                                                 ret = 1;
                                                 goto exit_fn;
                                         }
                                 }
 
-                                next_pos += 1 + strlen(signature);
+                                next_pos += 1 + strlen(hex_signature);
 
                         }
                 }
@@ -109,7 +128,7 @@ int blacklist_scan(char* file_path){
 
 
         }
-#ifdef DEBUF
+#ifdef DEBUG
 	fprintf(stdout, "%s is not a virus ",file_path);
 #endif
 exit_fn:
