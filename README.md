@@ -1,6 +1,21 @@
 README of Criminal Minds
 
 
+=========To be removed==========>
+
+Current blacklist hex-strings where more will be added in course of time  (can be tested on hello program for now)
++--------------+----------------------------------+
+| signature_id | signature                        |
++--------------+----------------------------------+
+|            1 | 2f6c69623634                     |
+|            2 | 642d6c696e75782d7838362d36342e73 |
+|            3 | ea069d15fb8d5d4701000000         |
++--------------+----------------------------------+
+
+=================================>
+
+
+
 In case you guys have a problem with checking out using https - Checkout repo via ssh
 
 https://confluence.atlassian.com/bitbucket/add-an-ssh-key-to-an-account-302811853.html
