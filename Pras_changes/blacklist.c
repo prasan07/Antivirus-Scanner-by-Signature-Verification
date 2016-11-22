@@ -99,13 +99,19 @@ int blacklist_scan(char* file_path){
                                 hex_signature = blacklist->signatures + next_pos;
 				hex_pos = hex_signature;	
 				byte_signature = malloc(strlen(hex_signature)/2 + 1);
+				if(!byte_signature){
+#ifdef DEBUG
+					fprintf(stderr, "Memory allocation error ");		
+#endif
+					ret = -1;
+					goto exit_fn;
+				}
 				pos = byte_signature;
 				/* Convert the hex_signature string to byte array */
 				for(j = 0; j < strlen(hex_signature)/2; j++){
 					sscanf(hex_pos,"%2hhx",pos);				
 					hex_pos += 2;
 					pos += 1;
-					printf("\n%d",j);
 				}	
 				pos = '\0';
 #ifdef TEST
@@ -121,7 +127,7 @@ int blacklist_scan(char* file_path){
                                 }
 
                                 next_pos += 1 + strlen(hex_signature);
-
+				free(byte_signature);
                         }
                 }
 
