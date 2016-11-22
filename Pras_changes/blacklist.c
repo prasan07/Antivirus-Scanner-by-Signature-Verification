@@ -26,6 +26,22 @@ int blacklist_scan(char* file_path){
         struct stat st;
         size_t fsize = 0;
 
+        if(stat(file_path,&st) < 0){
+#ifdef DEBUG
+                perror(file_path);
+#endif
+                ret = -1;
+                goto exit_fn;
+        }
+
+        if((st.st_mode & S_IEXEC) == 0){
+#ifdef DEBUG
+                fprintf(stdout, "%s is not an executable file ",file_path);
+#endif
+                ret = 0;
+                goto exit_fn;
+        }
+
 	/* Perform whitelist validation, call made to DB API " */
 	ret = isWhitelisted(file_path);
 	if( ret < 0){
@@ -49,20 +65,7 @@ int blacklist_scan(char* file_path){
                         ret = -1;
                         goto exit_fn;
                 }
-                if(stat(file_path,&st) < 0){
-#ifdef DEBUG
-                        perror(file_path);
-#endif
-                        ret = -1;
-                        goto exit_fn;
-                }
-                if((st.st_mode & S_IEXEC) == 0){
-#ifdef DEBUG
-                        fprintf(stdout, "%s is not an executable file ",file_path);
-#endif
-                        ret = 0;
-                        goto exit_fn;
-                }
+
                 /* Call made to DB API to get the complete up-to date blacklist */
                 blacklist = getstructures();
                 fsize = st.st_size;
