@@ -1,5 +1,6 @@
 #include "blacklist.h"
 #include <fcntl.h>
+#include <errno.h>
 #include <sys/types.h>
 #include "dbutility.h"
 
@@ -74,7 +75,7 @@ int blacklist_scan(char* file_path){
 #ifdef DEBUG
 			fprintf(stderr, "Memory allocation error ");		
 #endif
-			ret = -1;
+			ret = -ENOMEM;
 			goto exit_fn;
 		}
 
@@ -106,7 +107,7 @@ int blacklist_scan(char* file_path){
 #ifdef DEBUG
 					fprintf(stderr, "Memory allocation error ");		
 #endif
-					ret = -1;
+					ret = -ENOMEM;
 					goto exit_fn;
 				}
 				pos = byte_signature;
