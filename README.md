@@ -1,4 +1,5 @@
 README of Criminal Minds
+------------------------
 
 
 =========To be removed==========>
@@ -21,6 +22,7 @@ In case you guys have a problem with checking out using https - Checkout repo vi
 https://confluence.atlassian.com/bitbucket/add-an-ssh-key-to-an-account-302811853.html
 
 DESCRIPTION OF WORK TO BE DONE:
+-------------------------------
 
 1) Blacklist comparison :
    memcmp of virus signatures with the binary of the file.
@@ -52,23 +54,29 @@ https://stackoverflow.com/questions/6413855/update-database-table-from-one-sql-s
 Added a file - script.sh in Shyam's Changes folder - This script will create a test_dir with sample
 files - Can be used during tests if needed
 
+COMPLETED WORK
+--------------
 
-					COMPLETED WORK
 User space application
 The DB-update API must be plugged into the space provided in the main() function.
 
 The blacklist and whitelist logic must be plugged into the space provided in the 
 file_scan() function.
 
-					PENDING WORK
+PENDING WORK
+------------
+
 Kernel interception for open syscall has been coded. Will test today to see if it works.
 Will also test invocation of user space application.
 Will then check for other syscalls like exec, execv, execlv etc.
 
 ***Testing and input data for the black/white lists***
 
-Error reporting from user space app must be checked to see as to what happens if the kernel 	   invokes it.
+**initializing remote db with whitelist and blacklist script**
 
+Error reporting from user space app must be checked to see as to what happens if the kernel invokes it.
+
+-------------------------------------------------------------------------------
 
 https://www.cyberciti.biz/tips/how-do-i-enable-remote-access-to-mysql-database-server.html
 
@@ -87,4 +95,4 @@ gcc -o operations dboperations.c getSha256.c `mysql_config --cflags --libs` -lss
 
 Added the table checking and creating logic for three calls. 
 
-One thing to remember, when retrieving structures from getstructures(), free the memory after using it. 
+One thing to remember, when retrieving structures from getstructures(), free the memory after using it.
