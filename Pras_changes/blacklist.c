@@ -144,6 +144,7 @@ exit_fn:
 	if(f>=0){
 		close(f);
 	}
+        free(blacklist);
 	return ret;
 }
 
