@@ -292,7 +292,7 @@ out:
 	/*perform clean up and exit*/
 	if(res!=NULL)
 		mysql_free_result(res);
-	if(res!=NULL)
+	if(conn!=NULL)
    		mysql_close(conn);
 	return result;
 }
