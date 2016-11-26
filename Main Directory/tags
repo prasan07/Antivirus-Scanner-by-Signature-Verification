@@ -1,0 +1,57 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+DATABASE	dbutility.h	11;"	d
+PAGE_SIZE	dbutility.h	4;"	d
+PASS	dbutility.h	10;"	d
+REMOTE_LOC	dbutility.h	6;"	d
+REMOTE_USER	dbutility.h	7;"	d
+SERVER_LOC	dbutility.h	8;"	d
+USER	dbutility.h	9;"	d
+_BLACKLIST_H_	blacklist.h	2;"	d
+alloc_mem	dbutility.c	/^char *alloc_mem(char *arg)$/;"	f
+antivirus_scan	antivirus.c	/^int antivirus_scan(char *arg)$/;"	f
+blacklist_from_db	dbutility.h	/^}blacklist_from_db;$/;"	t	typeref:struct:signatures
+blacklist_scan	blacklist.c	/^int blacklist_scan(char* file_path){$/;"	f
+clearStack	antivirus.c	/^void clearStack(void)$/;"	f
+db_utility_H	dbutility.h	2;"	d
+delItem	antivirus.c	/^void delItem(void)$/;"	f
+delList	antivirus.c	/^void delList(void)$/;"	f
+dir_scan	antivirus.c	/^int dir_scan(char *arg)$/;"	f
+file_name	antivirus.c	/^        char file_name[1];$/;"	m	struct:quarantine_list	file:
+file_scan	antivirus.c	/^int file_scan(char *arg)$/;"	f
+generate_sha256	getSha256.c	/^int generate_sha256(char* file_path, unsigned char* hashed_string)$/;"	f
+getsha256	getSha256.c	/^char* getsha256(char * file_path)$/;"	f
+getstructures	dboperations.c	/^struct signatures *getstructures(){$/;"	f
+head	antivirus.c	/^struct quarantine_list *head = NULL;$/;"	v	typeref:struct:quarantine_list
+idx	antivirus.c	/^        int idx;$/;"	m	struct:idx_stack	file:
+idx_stack	antivirus.c	/^struct idx_stack$/;"	s	file:
+insItem	antivirus.c	/^int insItem(char *file_name, int name_size)$/;"	f
+insStack	antivirus.c	/^struct idx_stack *insStack(int idx)$/;"	f
+insertWhiteList	dbwhitelist.c	/^int insertWhiteList(char * file_path){$/;"	f
+isWhitelisted	dboperations.c	/^int isWhitelisted(char * file_path){$/;"	f
+main	antivirus.c	/^int main(int argc, char *argv[])$/;"	f
+main	dbutility.c	/^int main(int argc, char *argv[])$/;"	f
+main	dbwhitelist.c	/^int main(){$/;"	f
+main	test_programs/cpp_virus.cpp	/^int main()$/;"	f
+main	test_programs/hello.c	/^int main(){$/;"	f
+newItem	antivirus.c	/^struct quarantine_list *newItem(char *file_name, int name_size)$/;"	f
+next	antivirus.c	/^        struct idx_stack *next;$/;"	m	struct:idx_stack	typeref:struct:idx_stack::idx_stack	file:
+next	antivirus.c	/^        struct quarantine_list *next;$/;"	m	struct:quarantine_list	typeref:struct:quarantine_list::quarantine_list	file:
+pop	antivirus.c	/^int pop(void)$/;"	f
+printMsgBox	antivirus.c	/^int printMsgBox(void)$/;"	f
+printQList	antivirus.c	/^void printQList(void)$/;"	f
+print_cmdhelp	dbutility.c	/^void print_cmdhelp(char *arg)$/;"	f
+print_help	antivirus.c	/^void print_help(char *argv)$/;"	f
+push	antivirus.c	/^int push(int idx)$/;"	f
+quarantine_list	antivirus.c	/^struct quarantine_list$/;"	s	file:
+sig_count	dbutility.h	/^unsigned int sig_count;$/;"	m	struct:signatures
+signatures	dbutility.h	/^char * signatures;$/;"	m	struct:signatures
+signatures	dbutility.h	/^typedef struct signatures{$/;"	s
+tail	antivirus.c	/^struct quarantine_list *tail = NULL;$/;"	v	typeref:struct:quarantine_list
+top	antivirus.c	/^struct idx_stack *top = NULL;$/;"	v	typeref:struct:idx_stack
+update_structures	dboperations.c	/^int update_structures(){$/;"	f
+verify_tables	dboperations.c	/^int verify_tables(MYSQL *conn){$/;"	f

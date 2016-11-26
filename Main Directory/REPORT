@@ -1,0 +1,188 @@
+This Report describes the Antivirus Course Project of the Fall 2016 CSE509 Systems Security course
+at Stony Brook University.
+
+Contributors: 
+
+Arun Ramachandran (aruramachand@cs.stonybrook.edu, <enter SBU ID>)
+Gangabarani Balakrishnan (gbalakrishna@cs.stonybrook.edu, <110975065>)
+Prasanth Sridhar (prsridhar@cs.stonybrook.edu, <enter SBU ID>)
+Shyam Sundar Chandrasekaran (shychandrase@cs.stonybrook.edu, 110815338)
+---------------------------------------------------------------------------------------------------
+
+DESCRIPTION:
+
+A "simple" antivirus scanner that supports updates over the Internet. 
+
+The antivirus contains a list of known harmless programs - a whitelist - and a known malware
+signature list - a blacklist - and detects malware based on signatures of malicious programs. 
+
+Any detected malicious program is quarantined by removing its permissions and appending a ".virus"
+suffix to the name. User is appropriately notified of this via an alert message box.
+
+The antivirus runs in two scanning modes:
+
+        i) On Demand Scanning:
+           In On Demand scanning, the user can run a program to scan a file, or a directory
+           containing files, e.g. antivirus-scan /home/jack/Downloads.
+
+        ii) On Access Scanning:
+           In On Access scanning, in order to protect the user, a kernel driver hooks into the
+           appropriate system calls (e.g. open, execl, execlp, execle, execv, execvp, execvpe) and
+           scans the file before it is opened. If the file is a virus, then the antivirus
+           refuses to open the file.
+
+Details of usage can be found in the "INSTRUCTIONS" section.
+----------------------------------------------------------------------------------------------------
+
+DESIGN DECISIONS:
+
+In this section, we describe the various design decisions that we undertook for the project.
+
+Database APIs and Tables:
+
+The application uses a mysql DB to store the values of the whitelisted hashes and the blacklisted 
+virus signatures. There are two separate tables, one table (whitelist) used for storing the hashes 
+of whitelisted applications, One table(blacklist) used for storing the blacklist signatures. 
+
+whitelist table:
+1. hash_id 	- integer primary key.
+2. hash 	- varchar 65 characters long string.
+
+blacklist table:
+1. signature_id	- integer primary key.
+2. signature	- varible length signature having max 65535 characters long.
+
+The DB modules consists of three API calls, one API call for checking whether a hash value exists 
+in database, one for retrieving a list of all the blacklist signatures, last one for getting 
+updates from remote server. 
+
+API Calls:
+
+1. struct signatures* getstructures()
+	This call returns a concatenated string of all the blacklisted virus signatures delimited 
+	by a '\0' along  with the number of such strings. This method return NULL on error and 
+	valid struct object on success.
+
+2. int update_structures()
+	This call removes existing values in both the tables, connects to a remote database gets 
+	the new values and inserts them into the local database. The entire operation is performed
+	as a single transaction. In case of failure, the db will still be in a stable state.
+	This method return -1 on error, and 0 on success.
+
+3. int isWhitelisted(char * file_path)
+	This method gets the file location as input, calculates the sha256 hash value of the file,
+	checks to see if the value already exists in the database returns 1 if the hash exists, 
+	0 if the hash doesn't exist and -1 on error.
+
+The remote server is a mysql DB server, which allows remote connection to user based on the 
+permissions granted to the user. The entire operation of update is performed as a single 
+transaction, in case anything breaks in between, the entire transaction is rolled back and the
+database always remains in a stable state.
+
+The hash function used in our application is SHA256, which gives a 32 byte hash value for each
+hashed file.  
+
+<Add about Kernel Driver - Arun>
+<Add about Comparison - Prasanth>
+
+Antivirus Userspace executable:
+
+For the antivirus userspace application, we store the list of files that have been flagged as mali-
+cious programs within a linked list where each list entry contains path to the malicious file.
+
+This list is used to show to the user the files that have been quarantined - displayed via xmessage
+that displays it in a message box.
+
+we decided to add recursive traversal of subdirectories and files so as to scan all the contents
+within a directory.
+So, to keep track of the current directory namespace, we maintain a stack that stores the index,
+within the namespace, the location where the next directory name/file names needs to be added to
+
+The antivirus also supports scanning on softlinks - if a linked file is detected as a virus, its
+permissions are removed but the link to it is renamed with a ".virus" added at the end of the link
+name.
+
+For updating the virus database definitions, the antivirus makes use of the updateStructures()
+described above.
+----------------------------------------------------------------------------------------------------
+
+INSTRUCTIONS:
+
+Our antivirus works with *nix machines.
+
+We have provided a Makefile that can be used to build our antivirus as follows:
+
+        i) Download the source from <link>
+
+        ii) Extract the source files and use the following commands:
+                
+                make - To compile all the antivirus source code
+
+                make clean - clean up
+
+The antivirus can run in two modes (described in the "DESCRIPTION" section) - On Demand and On Access
+
+        i) For On Demand scanning of files or to update the antivirus definitions from remote repo:
+
+                ./antivirus (-u|path to file/directory)
+
+                Description of arguments:
+                -u                      - Update database definitions
+                path to file/directory  - Path of file/directory to scan
+
+        ii) For On Access scanning,
+
+                <Fill in the details>
+
+The antivirus uses a MySQL DB backend to store virus definitions that are used in scans. So, MySQL
+should be installed on the user machine for the antivirus software to be fully effective.
+
+MySQL installation guide can be found at:
+        https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-14-04
+
+In order to update virus definitions, we had to add firewall whitelisting and grant privileges on
+the remote MySQL DB as follows:
+
+/sbin/iptables -A INPUT -i <interface> -p tcp --destination-port 3306 -j ACCEPT
+
+grant all privileges on "database.tables" to 'username'@'%' identified by 'passphrase'
+----------------------------------------------------------------------------------------------------
+
+MAIN FILES:
+
+The details of the antivirus source files are as follows:
+
+REPORT            -     Project Report      
+antivirus.c       -     Code for the antivirus userspace executable
+<Guys add details of .c and .h files here>
+----------------------------------------------------------------------------------------------------
+
+TESTING:
+
+
+----------------------------------------------------------------------------------------------------
+
+REFERENCES:
+
+stackoverflow.com and linux man pages have been invaluable references.
+
+<Add references used by Prasanth>
+We also used the following references to use mysql apis with C programs and invoking user space
+applications from the kernel:
+
+<Add references used by arun>
+Remote DB connection:
+1. https://www.cyberciti.biz/tips/how-do-i-enable-remote-access-to-mysql-database-server.html
+2. https://stackoverflow.com/questions/15872543/access-remote-database-from-command-line
+
+MYSQL:
+1. http://dev.mysql.com/doc/refman/5.7/en/c-api-function-overview.html
+2. http://zetcode.com/db/mysqlc/
+3. http://stackoverflow.com/questions/11526369/c-sample-transaction-for-mysql
+
+SHA256:
+1. http://bradconte.com/sha256_c
+2. http://stackoverflow.com/questions/7853156/calculate-sha256-of-a-file-using-openssl-libcrypto-in-c
+3. http://stackoverflow.com/questions/22880627/sha256-implementation-in-c
+----------------------------------------------------------------------------------------------------
+
