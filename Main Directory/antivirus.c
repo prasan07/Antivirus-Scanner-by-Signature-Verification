@@ -10,7 +10,7 @@
 #include "dbutility.h"
 
 /* Stack used in recursive directory scans
- * to save the index of the file path from where
+ * to save the index in the file path from where
  * next scan file/dir name needs to be appended
  */
 struct idx_stack
@@ -163,8 +163,9 @@ void print_help(char *argv)
         printf("path to file/directory\t- Path of file/directory to scan\n");
 }
 
-/* Function printmsgBox displays the quarantined file names as an alert box
- * to the user
+/* Function printmsgBox 
+ * 
+ * displays the quarantined file names as an alert box to the user
  */
 int printMsgBox(void)
 {
@@ -206,9 +207,11 @@ exit_printMsgBox:
         return ret;
 }
 
-/* Function file_scan takes a file argument, scans it with the virus
- * definitions and if it is flagged to contain a virus,
- * removes all file permissions and appends a ".virus" to the filename
+/* Function file_scan
+ * 
+ * takes a file argument, scans it with the virus definitions and if it is
+ * flagged to contain a virus, removes all file permissions and appends a
+ * ".virus" to the filename
  */
 int file_scan(char *arg)
 {
@@ -268,8 +271,10 @@ exit_file_scan:
         return ret;
 }
 
-/* Function dir_scan takes a directory argument and recursively
- * scans its contents for possible virus definition matches
+/* Function dir_scan
+ * 
+ * takes a directory argument and recursively scans its contents for
+ * possible virus definition matches
  */
 int dir_scan(char *arg)
 {
@@ -299,8 +304,9 @@ int dir_scan(char *arg)
         prev_size = strlen(dir_path);
 
         /* Iterate through directory contents and add to
-         * and remove from the created directory path as
-         * needed
+         * or remove from the created directory path as
+         * needed. A stack is used to keep track of depth
+         * as recursive scans proceed
          */
         while ((entry = readdir(dir))) {
                 if (strcmp(entry->d_name, ".") == 0 || strcmp(entry->d_name, "..") == 0)
@@ -342,11 +348,9 @@ exit_dir_scan:
         return ret;
 }
 
-/* Function antivirus_scan is the core of the antivirus software
- * 
- * It scans the input file/directory argument
+/* Function antivirus_scan
  *
- * Can be called on demand / on access
+ * Scans the input file/directory argument. Can be called on demand / on access
  */
 int antivirus_scan(char *arg)
 {
@@ -391,18 +395,11 @@ int main(int argc, char *argv[])
                 goto exit_antivirus;
         }
         
-        if (strcmp(argv[1], "-u") == 0) {
-                /* Call update 
-                 *
-                 * Plugin in C API from Barani that will internally
-                 * issue SQL DB update transaction
-                 */
+        if (strcmp(argv[1], "-u") == 0) { 
+                ret = update_structures();
 #ifdef DEBUG
                 printf("Update antivirus definitions\n");
-#endif
-		ret = update_structures();
 
-#ifdef DEBUG
                 if (ret == -1)
                         fprintf(stderr, "Antivirus update failed\n");
                 else
@@ -417,7 +414,7 @@ int main(int argc, char *argv[])
 #endif
                 goto exit_antivirus;
         } else {
-                /* All Good - Scan the provided args */
+                /* Scan the provided args */
                 ret = antivirus_scan(argv[1]);    
         }
 exit_antivirus:
