@@ -5,7 +5,7 @@
 #define PAGE_SIZE 4096
 
 //DB config
-#define REMOTE_LOC "172.24.22.73"
+#define REMOTE_LOC "172.24.18.7"
 #define REMOTE_USER "barani008"
 #define SERVER_LOC "localhost"
 #define USER "root"
@@ -32,7 +32,7 @@ extern char* getsha256(char * file_path);
 extern struct signatures* getstructures();
 
 //method to update the virus signatures
-extern int update_structures(int flags);
+extern int update_structures(unsigned int flags);
 
 //method to compare the whitelist hashes
 extern int isWhitelisted(char * file_path);

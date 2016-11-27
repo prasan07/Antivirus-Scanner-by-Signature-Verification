@@ -5,6 +5,12 @@
 #include "dbutility.h"
 #include <mysql.h>
 
+/*
+function        : method to populate the database with whitelist values from known executables
+return value    : returns 0 on success, -1 on failure to create tables
+parameters      : MYSQL connection object and directory path
+*/
+
 int insertWhiteList(MYSQL *conn, char * file_path){
 	char* hash_val = NULL;
 	DIR *dir;
