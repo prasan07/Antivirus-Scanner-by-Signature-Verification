@@ -12,6 +12,9 @@
 /* Stack used in recursive directory scans
  * to save the index in the file path from where
  * next scan file/dir name needs to be appended
+ *
+ * File path used in alert box while displaying
+ * quarantined files
  */
 struct idx_stack
 {
@@ -311,7 +314,8 @@ int dir_scan(char *arg)
          * as recursive scans proceed
          */
         while ((entry = readdir(dir))) {
-                if (strcmp(entry->d_name, ".") == 0 || strcmp(entry->d_name, "..") == 0)
+                if (strcmp(entry->d_name, ".") == 0 ||
+                        strcmp(entry->d_name, "..") == 0)
                         continue;
 
                 if (dir_path && push(prev_size)) {
@@ -319,7 +323,8 @@ int dir_scan(char *arg)
                         goto exit_dir_scan;
                 }
 
-                dir_path = (char *)realloc(dir_path, prev_size + 2 + strlen(entry->d_name));
+                dir_path = (char *)realloc(dir_path, prev_size + 2 +
+                        strlen(entry->d_name));
 
                 if (!dir_path) {
                         ret = -ENOMEM;
@@ -399,6 +404,10 @@ int main(int argc, char *argv[])
         
         if ((strcmp(argv[1], "-ua") == 0) || (strcmp(argv[1], "-ub") == 0) ||
                 (strcmp(argv[1], "-uw") == 0)) {
+                /* ua - update all database definitions
+                 * ub - update just blacklist definitions
+                 * uw - update whitelist definitions
+                 */
                 int flags = UPDATE_ALL;
 
                 if (strcmp(argv[1], "-ub") == 0)
