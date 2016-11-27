@@ -157,9 +157,11 @@ void printQList(void)
 void print_help(char *argv)
 {
         printf("\nAntivirus program help\n");
-        printf("\nUsage: %s (-u|path to file/directory)\n", argv);
+        printf("\nUsage: %s (-ua|-ub|-uw|path to file/directory)\n", argv);
         printf("\nDescription of arguments:\n");
-        printf("-u\t\t\t- Update database definitions\n");
+        printf("-ua\t\t\t- Update all database definitions\n"); 
+        printf("-ub\t\t\t- Update blacklist definitions\n");
+        printf("-uw\t\t\t- Update whitelist definitions\n");
         printf("path to file/directory\t- Path of file/directory to scan\n");
 }
 
@@ -395,8 +397,16 @@ int main(int argc, char *argv[])
                 goto exit_antivirus;
         }
         
-        if (strcmp(argv[1], "-u") == 0) { 
-                ret = update_structures();
+        if ((strcmp(argv[1], "-ua") == 0) || (strcmp(argv[1], "-ub") == 0) ||
+                (strcmp(argv[1], "-uw") == 0)) {
+                int flags = UPDATE_ALL;
+
+                if (strcmp(argv[1], "-ub") == 0)
+                        flags = UPDATE_BLACKLIST;
+                else if (strcmp(argv[1], "-uw") == 0)
+                        flags = UPDATE_WHITELIST;
+
+                ret = update_structures(flags);
 #ifdef DEBUG
                 printf("Update antivirus definitions\n");
 

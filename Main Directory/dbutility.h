@@ -4,12 +4,18 @@
 
 #define PAGE_SIZE 4096
 
+//DB config
 #define REMOTE_LOC "172.24.22.73"
 #define REMOTE_USER "barani008"
 #define SERVER_LOC "localhost"
 #define USER "root"
 #define PASS "criminalminds"
 #define DATABASE "cse509"
+
+//update flags
+#define UPDATE_ALL              0
+#define UPDATE_WHITELIST        1
+#define UPDATE_BLACKLIST        2
 
 typedef struct signatures{
 unsigned int sig_count;
@@ -26,7 +32,7 @@ extern char* getsha256(char * file_path);
 extern struct signatures* getstructures();
 
 //method to update the virus signatures
-extern int update_structures();
+extern int update_structures(int flags);
 
 //method to compare the whitelist hashes
 extern int isWhitelisted(char * file_path);
