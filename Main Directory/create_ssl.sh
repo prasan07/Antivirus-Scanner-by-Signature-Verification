@@ -1,20 +1,34 @@
+# Generate and Configure SSL Keys for secure mySQL connections
+
+# Reference: https://lowendbox.com/blog/getting-started-with-mysql-over-ssl/
+
 # Create clean environment
-rm -rf ~/newcerts
-mkdir ~/newcerts && cd ~/newcerts
+rm -rf newcerts
+mkdir newcerts && cd newcerts
 
-# Create CA certificate
+#generate the CA certificate and private key.
 openssl genrsa 2048 > ca-key.pem
-openssl req -new -x509 -nodes -days 3600 -key ca-key.pem -out ca.pem
 
-# Create server certificate, remove passphrase, and sign it
-# server-cert.pem = public key, server-key.pem = private key
-openssl req -newkey rsa:2048 -days 3600 -nodes -keyout server-key.pem -out server-req.pem
+#generate the certificate using that key
+openssl req -sha1 -new -x509 -nodes -days 3650 -key ca-key.pem > ca-cert.pem
+
+#create a private key for the server and a signing request to go with that
+openssl req -sha1 -newkey rsa:2048 -days 730 -nodes -keyout server-key.pem > server-req.pem
+
+#export the private key into an RSA private key
 openssl rsa -in server-key.pem -out server-key.pem
-openssl x509 -req -in server-req.pem -days 3600 -CA ca.pem -CAkey ca-key.pem -set_serial 01 -out server-cert.pem
 
-# Create client certificate, remove passphrase, and sign it
-# client-cert.pem = public key, client-key.pem = private key
-openssl req -newkey rsa:2048 -days 3600 -nodes -keyout client-key.pem -out client-req.pem
-openssl rsa -in client-key.pem -out client-key.pem 
-openssl x509 -req -in client-req.pem -days 3600 -CA ca.pem -CAkey ca-key.pem -set_serial 01 -out client-cert.pem
+#create a certificate using the CA certificate
+openssl x509 -sha1 -req -in server-req.pem -days 730 -CA ca-cert.pem -CAkey ca-key.pem -set_serial 01 > server-cert.pem
+
+# Client key gen
+
+#a private key and a certificate signing request
+openssl req -sha1 -newkey rsa:2048 -days 730 -nodes -keyout client-key.pem > client-req.pem
+
+#export the private key to an RSA private key
+openssl rsa -in client-key.pem -out client-key.pem
+
+#create a certificate using the CA private key and certificate
+openssl x509 -sha1 -req -in client-req.pem -days 730 -CA ca-cert.pem -CAkey ca-key.pem -set_serial 01 > client-cert.pem
 
