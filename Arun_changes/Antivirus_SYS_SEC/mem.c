@@ -15,11 +15,9 @@
 #include "mem.h"
 #include "udis86.h"
 
-/*******************************************************************
-* Name:		MEM_make_rw
-* Description:	This function gets a specific memory address, and
-*		adds read & write permissions to its PTE.
-*******************************************************************/
+/*
+ * Provides read-write permission to the page of a given memory address
+ */
 int MEM_make_rw(unsigned long addr) {
 	int ret = 0;
 	pte_t * pte;
@@ -31,7 +29,6 @@ int MEM_make_rw(unsigned long addr) {
 		goto cleanup;
 	}
 
-	/* Add read & write permissions if needed */
 	if (0 == (pte->pte & _PAGE_RW)) {
 		pte->pte |= _PAGE_RW;
 	}
@@ -40,15 +37,13 @@ cleanup:
 	return ret;
 }
 
-/*******************************************************************
-* Name:		MEM_find_insn
-* Description:	This function gets a memory address, block
-*		size, asm instruction and its size. It disassembles
-*		the memory region until it finds the given
-*		instruction, or until it reaches the max block size.
-*		Finally it returns the offset of the instruction
-*		from the given address, or -1 otherwise.
-*******************************************************************/
+/*
+ * This function gets a memory address, block size, asm instruction and its size.
+ * It disassembles the memory region until it finds the given
+ * instruction, or until it reaches the max block size.
+ * Then, it returns the offset of the instruction
+ * from the given address.
+ */
 long MEM_find_insn_off(unsigned long mem_addr,
 				size_t block_size,
 				int insn_type,
@@ -72,14 +67,11 @@ long MEM_find_insn_off(unsigned long mem_addr,
 	return 1;
 }
 
-/*******************************************************************
-* Name:		MEM_patch_relative_call
-* Description:	This function searches for a relative call in a
-*		given memory region. In case a relative call is
-*		found, it will patch it to call `new_call_addr`.
-*		It saves the original called address in 
-*		`orig_call_addr`.
-*******************************************************************/
+/*
+ * This function searches for a relative call in a given memory region.
+ * In case a relative call is found, it will patch it to call a `new_call_addr`.
+ * It saves the original called address in `orig_call_addr`.
+ */
 int MEM_patch_relative_call(unsigned long mem_addr,
 				size_t block_size,
 				unsigned long new_call_addr,
@@ -96,7 +88,6 @@ int MEM_patch_relative_call(unsigned long mem_addr,
 						block_size, UD_Icall, 
 						RELATIVE_CALL_SIZE);	
 	if (call_insn_offset == 1) {
-//		DBG_PRINT("Error patching the relative call address");
 		ret = 1;
 		goto cleanup;
 	}
@@ -108,10 +99,10 @@ int MEM_patch_relative_call(unsigned long mem_addr,
 
 	call_relative_val = (*((int *) (call_insn_addr + 1)));
 
-	/* Calculate the relative value for calling the new_sys_execve */
+	/* Calculate the relative value for calling the new_execve */
 	new_call_relative_val = ((unsigned long) new_call_addr - call_insn_addr - RELATIVE_CALL_SIZE);
 
-	/* Save the address of the original sys_execve */
+	/* Save the address of the old_execve */
 	if (NULL != orig_call_addr) {
 		*orig_call_addr = call_insn_addr + RELATIVE_CALL_SIZE + call_relative_val;
 	}

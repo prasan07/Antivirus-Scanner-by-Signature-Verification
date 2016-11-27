@@ -3,7 +3,7 @@ at Stony Brook University.
 
 Contributors: 
 
-Arun Ramachandran (aruramachand@cs.stonybrook.edu, <enter SBU ID>)
+Arun Ramachandran (aruramachand@cs.stonybrook.edu, <110852807>)
 Gangabarani Balakrishnan (gbalakrishna@cs.stonybrook.edu, <110975065>)
 Prasanth Sridhar (prsridhar@cs.stonybrook.edu, <enter SBU ID>)
 Shyam Sundar Chandrasekaran (shychandrase@cs.stonybrook.edu, 110815338)
@@ -27,9 +27,9 @@ The antivirus runs in two scanning modes:
 
         ii) On Access Scanning:
            In On Access scanning, in order to protect the user, a kernel driver hooks into the
-           appropriate system calls (e.g. open, execl, execlp, execle, execv, execvp, execvpe) and
-           scans the file before it is opened. If the file is a virus, then the antivirus
-           refuses to open the file.
+           appropriate system calls (e.g. open, execve, and execveat) and
+           scans the file before it is opened. If the file is infected, then the antivirus
+           refuses to open the file. Additionally, a message is printed in the kernel log to indicate that the file 	       is infected.
 
 Details of usage can be found in the "INSTRUCTIONS" section.
 ----------------------------------------------------------------------------------------------------
@@ -50,39 +50,88 @@ whitelist table:
 
 blacklist table:
 1. signature_id	- integer primary key.
-2. signature	- varible length signature having max 65535 characters long.
+2. signature	- variable length signature having max 65535 characters.
 
 The DB modules consists of three API calls, one API call for checking whether a hash value exists 
-in database, one for retrieving a list of all the blacklist signatures, last one for getting 
-updates from remote server. 
+in the database, one for retrieving a list of all the blacklist signatures, and the last one for getting 
+updates from the remote server. 
 
 API Calls:
 
 1. struct signatures* getstructures()
 	This call returns a concatenated string of all the blacklisted virus signatures delimited 
-	by a '\0' along  with the number of such strings. This method return NULL on error and 
-	valid struct object on success.
+	by a '\0' along with the number of such strings. This method returns a NULL on error and 
+	a valid struct object on success.
 
 2. int update_structures()
-	This call removes existing values in both the tables, connects to a remote database gets 
+	This call removes existing values in both the tables, connects to a remote database, gets 
 	the new values and inserts them into the local database. The entire operation is performed
-	as a single transaction. In case of failure, the db will still be in a stable state.
-	This method return -1 on error, and 0 on success.
+	as a single transaction. In case of failure, the database will still be in a stable state.
+	This method returns -1 on error, and 0 on success.
 
 3. int isWhitelisted(char * file_path)
 	This method gets the file location as input, calculates the sha256 hash value of the file,
-	checks to see if the value already exists in the database returns 1 if the hash exists, 
+	checks to see if the value already exists in the database and returns 1 if the hash exists, 
 	0 if the hash doesn't exist and -1 on error.
 
-The remote server is a mysql DB server, which allows remote connection to user based on the 
+The remote server is a mysql DB server, which allows remote connection to a user based on the 
 permissions granted to the user. The entire operation of update is performed as a single 
-transaction, in case anything breaks in between, the entire transaction is rolled back and the
+transaction. In case anything breaks in between, the entire transaction is rolled back and the
 database always remains in a stable state.
 
 The hash function used in our application is SHA256, which gives a 32 byte hash value for each
 hashed file.  
 
 <Add about Kernel Driver - Arun>
+
+
+				Kernel Driver
+
+We used a driver as a module to intercept the open and exec family of system calls.
+
+First, we added a new entry to the syscall_64.tbl table, to facilitate the insertion and removal
+ of a module.
+Next, the corresponding initialization and exit functions of the module were used by custom
+ functions to hook to open, execve and execveat syscalls.
+The custom functions of the corresponding system calls, invoked the user space application, to
+ determine if the file was infected. If it were infected, then the corresponding open or exec
+ operation did not proceed, but a value of 1 was returned to the user (1 was to distinguish it
+ from standard errors which had negative values, and SUCCESS which returned 0). The intercepted
+ functions also logged a message in the kernel's dmesg log to indicate that the file was
+ infected. If the file was not detected, the standard sys_open() was invoked.
+
+The first major design choice was regarding the accessing of the syscall_table, which is an
+ array of pointers to corresponding system-call functions (like sys_open()). We decided to export
+ the table, and directly reference it.
+The next design choice was with respect to accessing the syscall_table, which was write-protected.
+ We used 2 techniques in combination, for this : 
+	a) To obtain the address of the page corresponding to the syscall_table and make it
+ 	   read-write for the period of time when the module was inserted, and restore to
+	   read-only later.
+	b) To disable the architecture-level write-protection bit in the control register of the
+	   CPU, for this period of time, and enable later.
+Once the above two were done, we were able to hook to the open syscall. Upon inserting the module,
+ we just saved the function pointer of the entry in the syscall_table array corresponding to
+ sys_open(), pointed that entry to our custom function, and restored the old pointer upon exiting
+ the module. The custom function invoked the virus-detection logic in user space, and either
+ disallowed an open upon detecting an infected file or allowed the standard sys_open() to proceed.
+ This was possible because we used the stored pointer of the entry corresponding to sys_open().
+
+Hooking to the exec family of system calls was quite more difficult, because exec was a part of a
+ set of operations for which assembly stubs were being added to the syscall. We tried the
+ following techniques, which all failed :
+
+    Directly save the pointer of table[__NR_execve]
+	and reference it	 	      		:   Process got killed
+    Invoke do_execve(), the function 
+	invoked sys_execve()			        :   Process got Killed
+    Exploit SYSCALL_OPEN() directly                	:   Dangerous, because we will not be
+							    hooking as a module. This means that
+							    the interception is permanent.
+							    But this is the last case resort.
+Finally, we were able to make use of an open source library( the udis86 disassembler), to find
+ the sys_execve() address within stub code and hook to it.
+
 <Add about Comparison - Prasanth>
 
 Antivirus Userspace executable:
@@ -131,7 +180,10 @@ The antivirus can run in two modes (described in the "DESCRIPTION" section) - On
                 path to file/directory  - Path of file/directory to scan
 
         ii) For On Access scanning,
-
+		To insert the module
+			insmod hook.ko
+		To unload the module
+			rmmod hook.ko
                 <Fill in the details>
 
 The antivirus uses a MySQL DB backend to store virus definitions that are used in scans. So, MySQL
@@ -154,12 +206,36 @@ The details of the antivirus source files are as follows:
 
 REPORT            -     Project Report      
 antivirus.c       -     Code for the antivirus userspace executable
+trapper.c	  - 	Module to intercept open and exec-related system calls, and invoke the userspace
+			virus-detection logic
+
+The following set of files were used from a reference code in github, for the purpose of hooking into sys_execve and sys_execveat. Unlike the sys_open system call, for which the syscall_table's entry corresponding to sys_open could be made to point to a custom-defined function, the sys_execve system call needed to be handled differently because assembly stubs were being added to the system call :
+
+mem.h and mem.c	  -	Helper functions to determine the actual pointer to the system call within the stub,
+			 and hook to that	
+
+The following files were used from the udis86 open source library for x86 architecture, which performed
+disassembling :
+
+udis86.h and libudis86/* 
+		  -	Functions of the disassembler engine(to inspect the input stream of machine code bytes)
+Makefile	  -	To compile and build the modules
+
 <Guys add details of .c and .h files here>
 ----------------------------------------------------------------------------------------------------
 
 TESTING:
 
-
+a) On-access scanning:
+	Upon insertion of the module, using "insmod trapper.ko", the open and exec related system calls will be
+	intercepted.
+	Upon execution of a file containing a virus, it will remove the permissions of the file, append ".virus"
+	to the file and disallow execution of the file.
+	The dmesg log in the kernel must be checked to notice a message that the file is infected.
+	The standard linux utilities will be continuously opened and executed, without being affected in any way.
+	This could be verified by checking the dmesg logs to see that no such standard utility is reported as being
+	infected. Moreover, if such a thing happens, the user-detection logic would append the utility
+	with a .virus, which would be noticed due to its impact on the system.
 ----------------------------------------------------------------------------------------------------
 
 REFERENCES:
@@ -167,10 +243,34 @@ REFERENCES:
 stackoverflow.com and linux man pages have been invaluable references.
 
 <Add references used by Prasanth>
+
+Kernel-Driver:
+1.  Patch code of Prof Erez Zadok(that had been in used in one of the OS assignments) to add a new system call
+
+2.  Hooking into open syscall :
+    http://www.gilgalab.com.br/hacking/programming/linux/2013/01/11/Hooking-Linux-3-syscalls/
+    https://ruinedsec.wordpress.com/2013/04/04/modifying-system-calls-dispatching-linux/
+    https://memset.wordpress.com/2010/12/03/syscall-hijacking-kernel-2-6-systems/
+
+3.  Invoking userspace application from within the kernel :
+    https://www.kernel.org/doc/htmldocs/kernel-api/API-call-usermodehelper-setup.html
+    https://www.ibm.com/developerworks/library/l-user-space-apps/
+    https://e2e.ti.com/support/embedded/linux/f/354/p/308901/1081956
+    http://www.tsri.com/jeneral/kernel/kernel/kmod.c/pm/PM-CALL_USERMODEHELPER.html
+
+4.  Hooking into exec family of syscalls :
+    https://github.com/kfiros/execmon : Referred a major part of the code for intercepting the execve syscall
+    http://www.gossamer-threads.com/lists/linux/kernel/159382
+    https://gist.github.com/mike820324/ba7b8c934f858fadc28b/
+    https://www.kernel.org/pub/linux/kernel/people/marcelo/linux-2.4/arch/mips/kernel/syscall.c
+    http://s.eresi-project.org/inc/articles/elf-rtld.txt
+
+5.  Consulted a partner team (Ravikumar Rajendran, Malini, and Parkavi) to know that the execve system call using
+    the udis86 library, will work only on certain distributions.
+
 We also used the following references to use mysql apis with C programs and invoking user space
 applications from the kernel:
 
-<Add references used by arun>
 Remote DB connection:
 1. https://www.cyberciti.biz/tips/how-do-i-enable-remote-access-to-mysql-database-server.html
 2. https://stackoverflow.com/questions/15872543/access-remote-database-from-command-line
@@ -184,5 +284,6 @@ SHA256:
 1. http://bradconte.com/sha256_c
 2. http://stackoverflow.com/questions/7853156/calculate-sha256-of-a-file-using-openssl-libcrypto-in-c
 3. http://stackoverflow.com/questions/22880627/sha256-implementation-in-c
+
 ----------------------------------------------------------------------------------------------------
 
