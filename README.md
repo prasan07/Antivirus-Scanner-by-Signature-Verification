@@ -101,8 +101,13 @@ https://dev.mysql.com/doc/refman/5.5/en/creating-ssl-files-using-openssl.html
 
 Setting up MYSQL SSL:
 ---------------------
-https://dev.mysql.com/doc/refman/5.5/en/creating-ssl-files-using-openssl.html
+https://www.percona.com/blog/2013/06/22/setting-up-mysql-ssl-and-secure-connections/
 
 Whitelist population utilities:
 -------------------------------
 https://askubuntu.com/questions/308045/differences-between-bin-sbin-usr-bin-usr-sbin-usr-local-bin-usr-local
+
+SSH IPTABLES:
+-------------
+sudo iptables -A INPUT -p tcp --dport ssh -j ACCEPT
+Edit /etc/ssh/ssh_config as sudo change port from 22 to xxxx
