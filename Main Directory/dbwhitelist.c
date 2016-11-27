@@ -64,7 +64,7 @@ out:
 int main(){
 	DIR *dir;
 	int i=0;
-	char* whitelistDirs[6] = {"/usr/local/sbin", "/usr/local/bin", "/usr/sbin", "/usr/bin", "/sbin", "/bin"};
+	char* whitelistDirs[7] = {"/usr/local/sbin", "/usr/local/bin", "/usr/sbin", "/usr/bin", "/sbin", "/bin", "/usr/lib/x86_64-linux-gnu"};
 	MYSQL *conn;
 
         conn = mysql_init(NULL);
@@ -84,7 +84,7 @@ int main(){
                 return -1;
         }
         
-        while ((i < 6) && (dir = opendir (whitelistDirs[i])) != NULL) {
+        while ((i < 7) && (dir = opendir (whitelistDirs[i])) != NULL) {
 		insertWhiteList(conn, whitelistDirs[i]);
 		i++;
 	}
