@@ -87,7 +87,7 @@ TO connect to a remote mysql server,
 1. comment out the bind address in the /etc/mysql/my.cnf
 2. use the "/sbin/iptables -A INPUT -i eth0 -p tcp --destination-port 3306 -j ACCEPT" to suppress firewall. instead of 'eth0' use your interface.
 3. grant all the permission using the following 
-grant all privileges on cse509.* to 'username'@'%' identified by 'passphrase';
+grant all privileges on cse509.* to 'username'@'%' identified by 'passphrase' REQUIRE SSL;
 4. Make sure that the previleges are set for the tables as well.
 
 gcc command to compile with the libraries:
@@ -95,4 +95,14 @@ gcc -o operations dboperations.c getSha256.c `mysql_config --cflags --libs` -lss
 
 Added the table checking and creating logic for three calls. 
 
-One thing to remember, when retrieving structures from getstructures(), free the memory after using it.
+Creating MYSQL SSL Files using openssl:
+--------------------------------------
+https://dev.mysql.com/doc/refman/5.5/en/creating-ssl-files-using-openssl.html
+
+Setting up MYSQL SSL:
+---------------------
+https://dev.mysql.com/doc/refman/5.5/en/creating-ssl-files-using-openssl.html
+
+Whitelist population utilities:
+-------------------------------
+https://askubuntu.com/questions/308045/differences-between-bin-sbin-usr-bin-usr-sbin-usr-local-bin-usr-local
