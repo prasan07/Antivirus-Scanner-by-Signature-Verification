@@ -101,7 +101,7 @@ https://dev.mysql.com/doc/refman/5.5/en/creating-ssl-files-using-openssl.html
 
 Setting up MYSQL SSL:
 ---------------------
-https://dev.mysql.com/doc/refman/5.5/en/creating-ssl-files-using-openssl.html
+https://www.percona.com/blog/2013/06/22/setting-up-mysql-ssl-and-secure-connections/
 
 Whitelist population utilities:
 -------------------------------
