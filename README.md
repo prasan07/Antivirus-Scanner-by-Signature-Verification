@@ -167,4 +167,4 @@ SSH IPTABLES:
 sudo iptables -A INPUT -p tcp --dport ssh -j ACCEPT
 Edit /etc/ssh/ssh_config as sudo change port from 22 to xxxx
 
-https://www.scribd.com/document/320972085/Install-MySql-5-5-Ubuntu16-04-Xenial-Xerus
+http://tecadmin.net/install-mysql-5-on-ubuntu/#
