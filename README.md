@@ -102,3 +102,7 @@ https://dev.mysql.com/doc/refman/5.5/en/creating-ssl-files-using-openssl.html
 Setting up MYSQL SSL:
 ---------------------
 https://dev.mysql.com/doc/refman/5.5/en/creating-ssl-files-using-openssl.html
+
+Whitelist population utilities:
+-------------------------------
+https://askubuntu.com/questions/308045/differences-between-bin-sbin-usr-bin-usr-sbin-usr-local-bin-usr-local
