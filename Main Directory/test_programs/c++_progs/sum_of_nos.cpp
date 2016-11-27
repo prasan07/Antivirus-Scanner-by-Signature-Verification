@@ -8,7 +8,7 @@ int main()
         int sum = 0;
         int nos;
 
-        cout << "Enter count of numbers to sum\n";
+        cout << "Enter count of numbers to sum Bugg inside :D\n";
         cin >> n;
 
         for (int i = 0; i < n; i++) {
