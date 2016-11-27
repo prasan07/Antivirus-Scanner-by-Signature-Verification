@@ -101,7 +101,62 @@ https://dev.mysql.com/doc/refman/5.5/en/creating-ssl-files-using-openssl.html
 
 Setting up MYSQL SSL:
 ---------------------
-https://www.percona.com/blog/2013/06/22/setting-up-mysql-ssl-and-secure-connections/
+https://lowendbox.com/blog/getting-started-with-mysql-over-ssl/
+
+generate the CA certificate and private key. On the server, go to /etc/mysql and type the following command:
+
+openssl genrsa 2048 > ca-key.pem
+
+generate the certificate using that key:
+
+openssl req -sha1 -new -x509 -nodes -days 3650 -key ca-key.pem > ca-cert.pem
+
+create a private key for the server and a signing request to go with that:
+
+openssl req -sha1 -newkey rsa:2048 -days 730 -nodes -keyout server-key.pem > server-req.pem
+
+export the private key into an RSA private key:
+
+openssl rsa -in server-key.pem -out server-key.pem
+
+create a certificate using the CA certificate:
+
+openssl x509 -sha1 -req -in server-req.pem -days 730  -CA ca-cert.pem -CAkey ca-key.pem -set_serial 01 > server-cert.pem
+
+Configure MySQL to use them. Open up /etc/mysql/my.cnf and put the following lines in the [mysqld] section:
+
+ssl-ca=/etc/mysql/ca-cert.pem
+ssl-cert=/etc/mysql/server-cert.pem
+ssl-key=/etc/mysql/server-key.pem
+
+To apply these changes, restart MySQL:
+
+sudo service mysql restart
+
+**Setting up the client:**
+
+we start with a private key and a certificate signing request:
+
+openssl req -sha1 -newkey rsa:2048 -days 730 -nodes -keyout client-key.pem > client-req.pem
+
+export the private key to an RSA private key:
+
+openssl rsa -in client-key.pem -out client-key.pem
+
+create a certificate using the CA private key and certificate:
+
+openssl x509 -sha1 -req -in client-req.pem -days 730 -CA ca-cert.pem -CAkey ca-key.pem -set_serial 01 > client-cert.pem
+
+copy the following three files to the client:
+
+ca-cert.pem
+client-key.pem
+client-cert.pem
+
+open up /etc/mysql/my.cnf and add the following lines under the [client] section:
+
+ssl-cert=/etc/mysql/server-cert.pem
+ssl-key=/etc/mysql/server-key.pem
 
 Whitelist population utilities:
 -------------------------------
