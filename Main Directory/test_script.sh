@@ -4,9 +4,14 @@ touch test_dir/a.txt
 mkdir test_dir/b
 touch test_dir/b/c.tsa
 cd test_programs
-rm -rf hello.virus
-rm -rf cpp_virus.virus
-gcc hello.c -o hello
-g++ cpp_virus.cpp -o cpp_virus
+rm -rf *.virus
+for i in *.c
+do
+        `gcc -g3 -o3 $i -o ${i%.c}`
+done
+for i in *.cpp
+do
+        `g++ $i -o ${i%.cpp}`
+done
 cd ..
 
