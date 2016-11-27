@@ -1,0 +1,1799 @@
+[Sun Nov 27 17:34:31 2016] 
+                           Inited new module
+[Sun Nov 27 17:34:31 2016] Syscall table is at : ffffffff81a00140
+[Sun Nov 27 17:34:31 2016] Syscall table correctly copied : ffffffff81a00140
+[Sun Nov 27 17:34:31 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:31 2016] File /dev/xconsole has been opened with mode 0 and flags 526338
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] No virus found, file /proc/self/oom_score_adj can be opened
+[Sun Nov 27 17:34:31 2016] File /proc/self/oom_score_adj has been opened with mode 0 and flags 524545
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /sys/module/hook/uevent
+[Sun Nov 27 17:34:31 2016] File /sys/module/hook/uevent has been opened with mode 438 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:31 2016] File /run/udev/data/+module:hook has been opened with mode 438 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /etc/ld.so.cache
+[Sun Nov 27 17:34:31 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] No virus found, file /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 can be opened
+[Sun Nov 27 17:34:31 2016] File /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 has been opened with mode 29032 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /sys/devices/virtual/dmi/id/sys_vendor
+[Sun Nov 27 17:34:31 2016] File /sys/devices/virtual/dmi/id/sys_vendor has been opened with mode 438 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /etc/ld.so.cache
+[Sun Nov 27 17:34:31 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /sys/devices/virtual/dmi/id/sys_vendor
+[Sun Nov 27 17:34:31 2016] File /sys/devices/virtual/dmi/id/sys_vendor has been opened with mode 438 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:31 2016] File /sys/module/uevent has been opened with mode 438 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:31 2016] File /run/udev/data/+module:module has been opened with mode 438 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libpthread.so.0
+[Sun Nov 27 17:34:31 2016] File /lib/x86_64-linux-gnu/libpthread.so.0 has been opened with mode 29032 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20
+[Sun Nov 27 17:34:31 2016] File /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 has been opened with mode 20840 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /sys/fs/cgroup/systemd/system.slice/systemd-udevd.service/cgroup.procs
+[Sun Nov 27 17:34:31 2016] File /sys/fs/cgroup/systemd/system.slice/systemd-udevd.service/cgroup.procs has been opened with mode 438 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+[Sun Nov 27 17:34:31 2016] File /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 has been opened with mode 29032 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libpthread.so.0
+[Sun Nov 27 17:34:31 2016] File /lib/x86_64-linux-gnu/libpthread.so.0 has been opened with mode 20840 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libc.so.6
+[Sun Nov 27 17:34:31 2016] File /lib/x86_64-linux-gnu/libc.so.6 has been opened with mode 29032 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+[Sun Nov 27 17:34:31 2016] File /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 has been opened with mode 20840 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libz.so.1
+[Sun Nov 27 17:34:31 2016] File /lib/x86_64-linux-gnu/libz.so.1 has been opened with mode 17616 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libc.so.6
+[Sun Nov 27 17:34:31 2016] File /lib/x86_64-linux-gnu/libc.so.6 has been opened with mode 20840 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libdl.so.2
+[Sun Nov 27 17:34:31 2016] File /lib/x86_64-linux-gnu/libdl.so.2 has been opened with mode 17616 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libz.so.1
+[Sun Nov 27 17:34:31 2016] File /lib/x86_64-linux-gnu/libz.so.1 has been opened with mode 9424 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+[Sun Nov 27 17:34:31 2016] File /usr/lib/x86_64-linux-gnu/libstdc++.so.6 has been opened with mode 17616 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libdl.so.2
+[Sun Nov 27 17:34:31 2016] File /lib/x86_64-linux-gnu/libdl.so.2 has been opened with mode 9424 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libm.so.6
+[Sun Nov 27 17:34:31 2016] File /lib/x86_64-linux-gnu/libm.so.6 has been opened with mode 17616 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+[Sun Nov 27 17:34:31 2016] File /usr/lib/x86_64-linux-gnu/libstdc++.so.6 has been opened with mode 9424 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libgcc_s.so.1
+[Sun Nov 27 17:34:31 2016] File /lib/x86_64-linux-gnu/libgcc_s.so.1 has been opened with mode 17616 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libm.so.6
+[Sun Nov 27 17:34:31 2016] File /lib/x86_64-linux-gnu/libm.so.6 has been opened with mode 9424 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libgcc_s.so.1
+[Sun Nov 27 17:34:31 2016] File /lib/x86_64-linux-gnu/libgcc_s.so.1 has been opened with mode 9424 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /etc/nsswitch.conf
+[Sun Nov 27 17:34:31 2016] File /etc/nsswitch.conf has been opened with mode 438 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] No virus found, file /etc/ld.so.cache can be opened
+[Sun Nov 27 17:34:31 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:31 2016] File /lib/x86_64-linux-gnu/tls/x86_64/libnss_db.so.2 has been opened with mode 42232 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:31 2016] File /lib/x86_64-linux-gnu/tls/libnss_db.so.2 has been opened with mode 42232 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:31 2016] File /lib/x86_64-linux-gnu/x86_64/libnss_db.so.2 has been opened with mode 42232 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:31 2016] File /lib/x86_64-linux-gnu/libnss_db.so.2 has been opened with mode 42232 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:31 2016] File /usr/lib/x86_64-linux-gnu/tls/x86_64/libnss_db.so.2 has been opened with mode 42232 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:31 2016] File /usr/lib/x86_64-linux-gnu/tls/libnss_db.so.2 has been opened with mode 42232 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:31 2016] File /usr/lib/x86_64-linux-gnu/x86_64/libnss_db.so.2 has been opened with mode 42232 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:31 2016] File /usr/lib/x86_64-linux-gnu/libnss_db.so.2 has been opened with mode 42232 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:31 2016] File /lib/tls/x86_64/libnss_db.so.2 has been opened with mode 42232 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:31 2016] File /lib/tls/libnss_db.so.2 has been opened with mode 42232 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:31 2016] File /lib/x86_64/libnss_db.so.2 has been opened with mode 42232 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:31 2016] File /lib/libnss_db.so.2 has been opened with mode 42232 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:31 2016] File /usr/lib/tls/x86_64/libnss_db.so.2 has been opened with mode 42232 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:31 2016] File /usr/lib/tls/libnss_db.so.2 has been opened with mode 42232 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:31 2016] File /usr/lib/x86_64/libnss_db.so.2 has been opened with mode 42232 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:31 2016] File /usr/lib/libnss_db.so.2 has been opened with mode 42232 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /etc/ld.so.cache
+[Sun Nov 27 17:34:31 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /etc/ld.so.cache
+[Sun Nov 27 17:34:31 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20
+[Sun Nov 27 17:34:31 2016] File /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 has been opened with mode 41320 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libnss_files.so.2
+[Sun Nov 27 17:34:31 2016] File /lib/x86_64-linux-gnu/libnss_files.so.2 has been opened with mode 42232 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libpthread.so.0
+[Sun Nov 27 17:34:31 2016] File /lib/x86_64-linux-gnu/libpthread.so.0 has been opened with mode 41320 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /etc/services
+[Sun Nov 27 17:34:31 2016] File /etc/services has been opened with mode 438 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:31 2016] File /dev/urandom has been opened with mode 57472 and flags 0
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+[Sun Nov 27 17:34:31 2016] File /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 has been opened with mode 41320 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /usr/share/mysql/charsets/Index.xml
+[Sun Nov 27 17:34:31 2016] File /usr/share/mysql/charsets/Index.xml has been opened with mode 416 and flags 0
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libc.so.6
+[Sun Nov 27 17:34:31 2016] File /lib/x86_64-linux-gnu/libc.so.6 has been opened with mode 41320 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20
+[Sun Nov 27 17:34:31 2016] File /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 has been opened with mode 438 and flags 0
+
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libz.so.1
+[Sun Nov 27 17:34:31 2016] File /lib/x86_64-linux-gnu/libz.so.1 has been opened with mode 29904 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libdl.so.2
+[Sun Nov 27 17:34:31 2016] File /lib/x86_64-linux-gnu/libdl.so.2 has been opened with mode 29904 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+[Sun Nov 27 17:34:31 2016] File /usr/lib/x86_64-linux-gnu/libstdc++.so.6 has been opened with mode 29904 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libm.so.6
+[Sun Nov 27 17:34:31 2016] File /lib/x86_64-linux-gnu/libm.so.6 has been opened with mode 29904 and flags 524288
+
+[Sun Nov 27 17:34:31 2016] REGULAR FILE
+[Sun Nov 27 17:34:31 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libgcc_s.so.1
+[Sun Nov 27 17:34:31 2016] File /lib/x86_64-linux-gnu/libgcc_s.so.1 has been opened with mode 29904 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:34 2016] File . has been opened with mode 45312 and flags 591872
+
+[Sun Nov 27 17:34:34 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:34 2016] File . has been opened with mode 45312 and flags 591872
+
+[Sun Nov 27 17:34:34 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:34 2016] File /dev/null has been opened with mode 438 and flags 577
+
+[Sun Nov 27 17:34:34 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:34 2016] File /dev/null has been opened with mode 438 and flags 577
+
+[Sun Nov 27 17:34:34 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:34 2016] File . has been opened with mode 30953 and flags 591872
+
+[Sun Nov 27 17:34:34 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:34 2016] File /tmp/sh-thd-3792332717132641541 has been opened with mode 384 and flags 705
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] No virus found, file /tmp/sh-thd-3792332717132641541 can be opened
+[Sun Nov 27 17:34:34 2016] File /tmp/sh-thd-3792332717132641541 has been opened with mode 384 and flags 0
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] No virus found, file /etc/ld.so.cache can be opened
+[Sun Nov 27 17:34:34 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:34 2016] File . has been opened with mode 4345 and flags 591872
+
+[Sun Nov 27 17:34:34 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:34 2016] File /tmp/sh-thd-7584665433616673623 has been opened with mode 384 and flags 705
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20
+[Sun Nov 27 17:34:34 2016] File /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 has been opened with mode 360 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /etc/ld.so.cache
+[Sun Nov 27 17:34:34 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] No virus found, file /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 can be opened
+[Sun Nov 27 17:34:34 2016] File /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 has been opened with mode 20840 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /tmp/sh-thd-7584665433616673623
+[Sun Nov 27 17:34:34 2016] File /tmp/sh-thd-7584665433616673623 has been opened with mode 384 and flags 0
+
+[Sun Nov 27 17:34:34 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:34 2016] File /dev/null has been opened with mode 438 and flags 577
+
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libpthread.so.0
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libpthread.so.0 has been opened with mode 360 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /etc/ld.so.cache
+[Sun Nov 27 17:34:34 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libpthread.so.0
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libpthread.so.0 has been opened with mode 20840 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 has been opened with mode 360 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20
+[Sun Nov 27 17:34:34 2016] File /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 has been opened with mode 41320 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 has been opened with mode 20840 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libc.so.6
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libc.so.6 has been opened with mode 360 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libpthread.so.0
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libpthread.so.0 has been opened with mode 41320 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libc.so.6
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libc.so.6 has been opened with mode 20840 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libz.so.1
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libz.so.1 has been opened with mode 54480 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 has been opened with mode 41320 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libz.so.1
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libz.so.1 has been opened with mode 9424 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libdl.so.2
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libdl.so.2 has been opened with mode 54480 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libc.so.6
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libc.so.6 has been opened with mode 41320 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libdl.so.2
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libdl.so.2 has been opened with mode 9424 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+[Sun Nov 27 17:34:34 2016] File /usr/lib/x86_64-linux-gnu/libstdc++.so.6 has been opened with mode 54480 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libz.so.1
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libz.so.1 has been opened with mode 29904 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+[Sun Nov 27 17:34:34 2016] File /usr/lib/x86_64-linux-gnu/libstdc++.so.6 has been opened with mode 9424 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libm.so.6
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libm.so.6 has been opened with mode 54480 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libdl.so.2
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libdl.so.2 has been opened with mode 29904 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libm.so.6
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libm.so.6 has been opened with mode 9424 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libgcc_s.so.1
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libgcc_s.so.1 has been opened with mode 54480 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+[Sun Nov 27 17:34:34 2016] File /usr/lib/x86_64-linux-gnu/libstdc++.so.6 has been opened with mode 29904 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libgcc_s.so.1
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libgcc_s.so.1 has been opened with mode 9424 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libm.so.6
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libm.so.6 has been opened with mode 29904 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] No virus found, file /lib/x86_64-linux-gnu/libgcc_s.so.1 can be opened
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libgcc_s.so.1 has been opened with mode 29904 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] No virus found, file /etc/ld.so.cache can be opened
+[Sun Nov 27 17:34:34 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /etc/nsswitch.conf
+[Sun Nov 27 17:34:34 2016] File /etc/nsswitch.conf has been opened with mode 438 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20
+[Sun Nov 27 17:34:34 2016] File /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 has been opened with mode 12648 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /etc/ld.so.cache
+[Sun Nov 27 17:34:34 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /etc/ld.so.cache
+[Sun Nov 27 17:34:34 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/tls/x86_64/libnss_db.so.2 has been opened with mode 62712 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/tls/libnss_db.so.2 has been opened with mode 62712 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/x86_64/libnss_db.so.2 has been opened with mode 62712 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libnss_db.so.2 has been opened with mode 62712 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:34 2016] File /usr/lib/x86_64-linux-gnu/tls/x86_64/libnss_db.so.2 has been opened with mode 62712 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:34 2016] File /usr/lib/x86_64-linux-gnu/tls/libnss_db.so.2 has been opened with mode 62712 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:34 2016] File /usr/lib/x86_64-linux-gnu/x86_64/libnss_db.so.2 has been opened with mode 62712 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:34 2016] File /usr/lib/x86_64-linux-gnu/libnss_db.so.2 has been opened with mode 62712 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:34 2016] File /lib/tls/x86_64/libnss_db.so.2 has been opened with mode 62712 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:34 2016] File /lib/tls/libnss_db.so.2 has been opened with mode 62712 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64/libnss_db.so.2 has been opened with mode 62712 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:34 2016] File /lib/libnss_db.so.2 has been opened with mode 62712 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:34 2016] File /usr/lib/tls/x86_64/libnss_db.so.2 has been opened with mode 62712 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:34 2016] File /usr/lib/tls/libnss_db.so.2 has been opened with mode 62712 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:34 2016] File /usr/lib/x86_64/libnss_db.so.2 has been opened with mode 62712 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:34 2016] File /usr/lib/libnss_db.so.2 has been opened with mode 62712 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20
+[Sun Nov 27 17:34:34 2016] File /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 has been opened with mode 49512 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /etc/ld.so.cache
+[Sun Nov 27 17:34:34 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libpthread.so.0
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libpthread.so.0 has been opened with mode 12648 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] No virus found, file /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 can be opened
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 has been opened with mode 12648 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libpthread.so.0
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libpthread.so.0 has been opened with mode 49512 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libnss_files.so.2
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libnss_files.so.2 has been opened with mode 62712 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 has been opened with mode 49512 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /etc/ld.so.cache
+[Sun Nov 27 17:34:34 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /etc/services
+[Sun Nov 27 17:34:34 2016] File /etc/services has been opened with mode 438 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:34 2016] File /dev/urandom has been opened with mode 57920 and flags 0
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libc.so.6
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libc.so.6 has been opened with mode 12648 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libc.so.6
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libc.so.6 has been opened with mode 49512 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20
+[Sun Nov 27 17:34:34 2016] File /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 has been opened with mode 37224 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /usr/share/mysql/charsets/Index.xml
+[Sun Nov 27 17:34:34 2016] File /usr/share/mysql/charsets/Index.xml has been opened with mode 416 and flags 0
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libz.so.1
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libz.so.1 has been opened with mode 1232 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libpthread.so.0
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libpthread.so.0 has been opened with mode 37224 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libz.so.1
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libz.so.1 has been opened with mode 38096 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20
+[Sun Nov 27 17:34:34 2016] File /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 has been opened with mode 438 and flags 0
+
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libdl.so.2
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libdl.so.2 has been opened with mode 1232 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 has been opened with mode 37224 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libdl.so.2
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libdl.so.2 has been opened with mode 38096 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+[Sun Nov 27 17:34:34 2016] File /usr/lib/x86_64-linux-gnu/libstdc++.so.6 has been opened with mode 1232 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+[Sun Nov 27 17:34:34 2016] File /usr/lib/x86_64-linux-gnu/libstdc++.so.6 has been opened with mode 38096 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libc.so.6
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libc.so.6 has been opened with mode 37224 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libm.so.6
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libm.so.6 has been opened with mode 1232 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libm.so.6
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libm.so.6 has been opened with mode 38096 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libz.so.1
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libz.so.1 has been opened with mode 25808 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libgcc_s.so.1
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libgcc_s.so.1 has been opened with mode 1232 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libgcc_s.so.1
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libgcc_s.so.1 has been opened with mode 38096 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libdl.so.2
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libdl.so.2 has been opened with mode 25808 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] No virus found, file /usr/lib/x86_64-linux-gnu/libstdc++.so.6 can be opened
+[Sun Nov 27 17:34:34 2016] File /usr/lib/x86_64-linux-gnu/libstdc++.so.6 has been opened with mode 25808 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] No virus found, file /etc/ld.so.cache can be opened
+[Sun Nov 27 17:34:34 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libm.so.6
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libm.so.6 has been opened with mode 25808 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20
+[Sun Nov 27 17:34:34 2016] File /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 has been opened with mode 29032 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /etc/ld.so.cache
+[Sun Nov 27 17:34:34 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libgcc_s.so.1
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libgcc_s.so.1 has been opened with mode 25808 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20
+[Sun Nov 27 17:34:34 2016] File /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 has been opened with mode 29032 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libpthread.so.0
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libpthread.so.0 has been opened with mode 29032 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libpthread.so.0
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libpthread.so.0 has been opened with mode 29032 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 has been opened with mode 29032 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 has been opened with mode 29032 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libc.so.6
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libc.so.6 has been opened with mode 29032 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libc.so.6
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libc.so.6 has been opened with mode 29032 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libz.so.1
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libz.so.1 has been opened with mode 17616 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libz.so.1
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libz.so.1 has been opened with mode 17616 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libdl.so.2
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libdl.so.2 has been opened with mode 17616 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libdl.so.2
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libdl.so.2 has been opened with mode 17616 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+[Sun Nov 27 17:34:34 2016] File /usr/lib/x86_64-linux-gnu/libstdc++.so.6 has been opened with mode 17616 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+[Sun Nov 27 17:34:34 2016] File /usr/lib/x86_64-linux-gnu/libstdc++.so.6 has been opened with mode 17616 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libm.so.6
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libm.so.6 has been opened with mode 17616 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libm.so.6
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libm.so.6 has been opened with mode 17616 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] REGULAR FILE
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libgcc_s.so.1
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libgcc_s.so.1 has been opened with mode 17616 and flags 524288
+
+[Sun Nov 27 17:34:34 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libgcc_s.so.1
+[Sun Nov 27 17:34:34 2016] File /lib/x86_64-linux-gnu/libgcc_s.so.1 has been opened with mode 17616 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:36 2016] File . has been opened with mode 45312 and flags 591872
+
+[Sun Nov 27 17:34:36 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:36 2016] File . has been opened with mode 45312 and flags 591872
+
+[Sun Nov 27 17:34:36 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:36 2016] File /dev/null has been opened with mode 438 and flags 577
+
+[Sun Nov 27 17:34:36 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:36 2016] File /dev/null has been opened with mode 438 and flags 577
+
+[Sun Nov 27 17:34:36 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:36 2016] File . has been opened with mode 45037 and flags 591872
+
+[Sun Nov 27 17:34:36 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:36 2016] File /tmp/sh-thd-15169330868362485103 has been opened with mode 384 and flags 705
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] No virus found, file /tmp/sh-thd-15169330868362485103 can be opened
+[Sun Nov 27 17:34:36 2016] File /tmp/sh-thd-15169330868362485103 has been opened with mode 384 and flags 0
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] No virus found, file /etc/ld.so.cache can be opened
+[Sun Nov 27 17:34:36 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:36 2016] File . has been opened with mode 36685 and flags 591872
+
+[Sun Nov 27 17:34:36 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:36 2016] File /tmp/sh-thd-11891917662712814309 has been opened with mode 384 and flags 705
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20
+[Sun Nov 27 17:34:36 2016] File /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 has been opened with mode 33128 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /etc/ld.so.cache
+[Sun Nov 27 17:34:36 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] No virus found, file /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 can be opened
+[Sun Nov 27 17:34:36 2016] File /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 has been opened with mode 12648 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /tmp/sh-thd-11891917662712814309
+[Sun Nov 27 17:34:36 2016] File /tmp/sh-thd-11891917662712814309 has been opened with mode 384 and flags 0
+
+[Sun Nov 27 17:34:36 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:36 2016] File /dev/null has been opened with mode 438 and flags 577
+
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libpthread.so.0
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/libpthread.so.0 has been opened with mode 33128 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /etc/ld.so.cache
+[Sun Nov 27 17:34:36 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libpthread.so.0
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/libpthread.so.0 has been opened with mode 12648 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 has been opened with mode 33128 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20
+[Sun Nov 27 17:34:36 2016] File /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 has been opened with mode 12648 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 has been opened with mode 12648 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libc.so.6
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/libc.so.6 has been opened with mode 33128 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libpthread.so.0
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/libpthread.so.0 has been opened with mode 12648 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libc.so.6
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/libc.so.6 has been opened with mode 12648 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libz.so.1
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/libz.so.1 has been opened with mode 21712 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 has been opened with mode 12648 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libz.so.1
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/libz.so.1 has been opened with mode 1232 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libdl.so.2
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/libdl.so.2 has been opened with mode 21712 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libc.so.6
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/libc.so.6 has been opened with mode 12648 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libdl.so.2
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/libdl.so.2 has been opened with mode 1232 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+[Sun Nov 27 17:34:36 2016] File /usr/lib/x86_64-linux-gnu/libstdc++.so.6 has been opened with mode 21712 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libz.so.1
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/libz.so.1 has been opened with mode 1232 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+[Sun Nov 27 17:34:36 2016] File /usr/lib/x86_64-linux-gnu/libstdc++.so.6 has been opened with mode 1232 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libm.so.6
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/libm.so.6 has been opened with mode 21712 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libdl.so.2
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/libdl.so.2 has been opened with mode 1232 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libm.so.6
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/libm.so.6 has been opened with mode 1232 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libgcc_s.so.1
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/libgcc_s.so.1 has been opened with mode 21712 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+[Sun Nov 27 17:34:36 2016] File /usr/lib/x86_64-linux-gnu/libstdc++.so.6 has been opened with mode 1232 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libgcc_s.so.1
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/libgcc_s.so.1 has been opened with mode 1232 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libm.so.6
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/libm.so.6 has been opened with mode 1232 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] No virus found, file /lib/x86_64-linux-gnu/libgcc_s.so.1 can be opened
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/libgcc_s.so.1 has been opened with mode 1232 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] No virus found, file /etc/ld.so.cache can be opened
+[Sun Nov 27 17:34:36 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /etc/nsswitch.conf
+[Sun Nov 27 17:34:36 2016] File /etc/nsswitch.conf has been opened with mode 438 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20
+[Sun Nov 27 17:34:36 2016] File /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 has been opened with mode 61800 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /etc/ld.so.cache
+[Sun Nov 27 17:34:36 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /etc/ld.so.cache
+[Sun Nov 27 17:34:36 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/tls/x86_64/libnss_db.so.2 has been opened with mode 34040 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/tls/libnss_db.so.2 has been opened with mode 34040 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/x86_64/libnss_db.so.2 has been opened with mode 34040 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/libnss_db.so.2 has been opened with mode 34040 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:36 2016] File /usr/lib/x86_64-linux-gnu/tls/x86_64/libnss_db.so.2 has been opened with mode 34040 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:36 2016] File /usr/lib/x86_64-linux-gnu/tls/libnss_db.so.2 has been opened with mode 34040 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:36 2016] File /usr/lib/x86_64-linux-gnu/x86_64/libnss_db.so.2 has been opened with mode 34040 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:36 2016] File /usr/lib/x86_64-linux-gnu/libnss_db.so.2 has been opened with mode 34040 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:36 2016] File /lib/tls/x86_64/libnss_db.so.2 has been opened with mode 34040 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:36 2016] File /lib/tls/libnss_db.so.2 has been opened with mode 34040 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64/libnss_db.so.2 has been opened with mode 34040 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:36 2016] File /lib/libnss_db.so.2 has been opened with mode 34040 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:36 2016] File /usr/lib/tls/x86_64/libnss_db.so.2 has been opened with mode 34040 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:36 2016] File /usr/lib/tls/libnss_db.so.2 has been opened with mode 34040 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:36 2016] File /usr/lib/x86_64/libnss_db.so.2 has been opened with mode 34040 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:36 2016] File /usr/lib/libnss_db.so.2 has been opened with mode 34040 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20
+[Sun Nov 27 17:34:36 2016] File /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 has been opened with mode 8552 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libpthread.so.0
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/libpthread.so.0 has been opened with mode 61800 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /etc/ld.so.cache
+[Sun Nov 27 17:34:36 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libpthread.so.0
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/libpthread.so.0 has been opened with mode 8552 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 has been opened with mode 61800 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libnss_files.so.2
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/libnss_files.so.2 has been opened with mode 34040 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 has been opened with mode 8552 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libc.so.6
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/libc.so.6 has been opened with mode 61800 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /etc/services
+[Sun Nov 27 17:34:36 2016] File /etc/services has been opened with mode 438 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:36 2016] File /dev/urandom has been opened with mode 14240 and flags 0
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libc.so.6
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/libc.so.6 has been opened with mode 8552 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libz.so.1
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/libz.so.1 has been opened with mode 50384 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /usr/share/mysql/charsets/Index.xml
+[Sun Nov 27 17:34:36 2016] File /usr/share/mysql/charsets/Index.xml has been opened with mode 416 and flags 0
+
+[Sun Nov 27 17:34:36 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:36 2016] File /run/log/journal/20b8c104d28344b28a2dd00d1d5dc75c/system.journal has been opened with mode 416 and flags 524354
+
+[Sun Nov 27 17:34:36 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:36 2016] File /run/log/journal/20b8c104d28344b28a2dd00d1d5dc75c has been opened with mode 13668 and flags 591872
+
+[Sun Nov 27 17:34:36 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:36 2016] File /run/log/journal/20b8c104d28344b28a2dd00d1d5dc75c has been opened with mode 0 and flags 591872
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libz.so.1
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/libz.so.1 has been opened with mode 62672 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libdl.so.2
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/libdl.so.2 has been opened with mode 50384 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20
+[Sun Nov 27 17:34:36 2016] File /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 has been opened with mode 438 and flags 0
+
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+[Sun Nov 27 17:34:36 2016] File /usr/lib/x86_64-linux-gnu/libstdc++.so.6 has been opened with mode 50384 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libdl.so.2
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/libdl.so.2 has been opened with mode 62672 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libm.so.6
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/libm.so.6 has been opened with mode 50384 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+[Sun Nov 27 17:34:36 2016] File /usr/lib/x86_64-linux-gnu/libstdc++.so.6 has been opened with mode 62672 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libgcc_s.so.1
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/libgcc_s.so.1 has been opened with mode 50384 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libm.so.6
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/libm.so.6 has been opened with mode 62672 and flags 524288
+
+[Sun Nov 27 17:34:36 2016] REGULAR FILE
+[Sun Nov 27 17:34:36 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libgcc_s.so.1
+[Sun Nov 27 17:34:36 2016] File /lib/x86_64-linux-gnu/libgcc_s.so.1 has been opened with mode 62672 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:37 2016] File . has been opened with mode 45312 and flags 591872
+
+[Sun Nov 27 17:34:37 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:37 2016] File . has been opened with mode 45312 and flags 591872
+
+[Sun Nov 27 17:34:37 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:37 2016] File /dev/null has been opened with mode 438 and flags 577
+
+[Sun Nov 27 17:34:37 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:37 2016] File /dev/null has been opened with mode 438 and flags 577
+
+[Sun Nov 27 17:34:37 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:37 2016] File /usr/src/linux-stable/Antivirus/test_programs/ has been opened with mode 47 and flags 591872
+
+[Sun Nov 27 17:34:37 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:37 2016] File /tmp/sh-thd-5337091250637185349 has been opened with mode 384 and flags 705
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] No virus found, file /tmp/sh-thd-5337091250637185349 can be opened
+[Sun Nov 27 17:34:37 2016] File /tmp/sh-thd-5337091250637185349 has been opened with mode 384 and flags 0
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] No virus found, file /etc/ld.so.cache can be opened
+[Sun Nov 27 17:34:37 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:37 2016] File /usr/src/linux-stable/Antivirus/test_programs/ has been opened with mode 47 and flags 591872
+
+[Sun Nov 27 17:34:37 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:37 2016] File /tmp/sh-thd-10674182501907466647 has been opened with mode 384 and flags 705
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20
+[Sun Nov 27 17:34:37 2016] File /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 has been opened with mode 41320 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /etc/ld.so.cache
+[Sun Nov 27 17:34:37 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] No virus found, file /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 can be opened
+[Sun Nov 27 17:34:37 2016] File /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 has been opened with mode 49512 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /tmp/sh-thd-10674182501907466647
+[Sun Nov 27 17:34:37 2016] File /tmp/sh-thd-10674182501907466647 has been opened with mode 384 and flags 0
+
+[Sun Nov 27 17:34:37 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:37 2016] File /dev/null has been opened with mode 438 and flags 577
+
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libpthread.so.0
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/libpthread.so.0 has been opened with mode 41320 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /etc/ld.so.cache
+[Sun Nov 27 17:34:37 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libpthread.so.0
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/libpthread.so.0 has been opened with mode 49512 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 has been opened with mode 41320 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20
+[Sun Nov 27 17:34:37 2016] File /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 has been opened with mode 8552 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 has been opened with mode 49512 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libc.so.6
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/libc.so.6 has been opened with mode 41320 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libpthread.so.0
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/libpthread.so.0 has been opened with mode 8552 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libc.so.6
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/libc.so.6 has been opened with mode 49512 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libz.so.1
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/libz.so.1 has been opened with mode 29904 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 has been opened with mode 8552 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libz.so.1
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/libz.so.1 has been opened with mode 38096 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libdl.so.2
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/libdl.so.2 has been opened with mode 29904 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libc.so.6
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/libc.so.6 has been opened with mode 8552 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libdl.so.2
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/libdl.so.2 has been opened with mode 38096 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+[Sun Nov 27 17:34:37 2016] File /usr/lib/x86_64-linux-gnu/libstdc++.so.6 has been opened with mode 29904 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libz.so.1
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/libz.so.1 has been opened with mode 62672 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+[Sun Nov 27 17:34:37 2016] File /usr/lib/x86_64-linux-gnu/libstdc++.so.6 has been opened with mode 38096 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libm.so.6
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/libm.so.6 has been opened with mode 29904 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libdl.so.2
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/libdl.so.2 has been opened with mode 62672 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libm.so.6
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/libm.so.6 has been opened with mode 38096 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libgcc_s.so.1
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/libgcc_s.so.1 has been opened with mode 29904 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+[Sun Nov 27 17:34:37 2016] File /usr/lib/x86_64-linux-gnu/libstdc++.so.6 has been opened with mode 62672 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libgcc_s.so.1
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/libgcc_s.so.1 has been opened with mode 38096 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libm.so.6
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/libm.so.6 has been opened with mode 62672 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] No virus found, file /lib/x86_64-linux-gnu/libgcc_s.so.1 can be opened
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/libgcc_s.so.1 has been opened with mode 62672 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] No virus found, file /etc/ld.so.cache can be opened
+[Sun Nov 27 17:34:37 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /etc/nsswitch.conf
+[Sun Nov 27 17:34:37 2016] File /etc/nsswitch.conf has been opened with mode 438 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20
+[Sun Nov 27 17:34:37 2016] File /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 has been opened with mode 24936 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /etc/ld.so.cache
+[Sun Nov 27 17:34:37 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /etc/ld.so.cache
+[Sun Nov 27 17:34:37 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/tls/x86_64/libnss_db.so.2 has been opened with mode 29944 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/tls/libnss_db.so.2 has been opened with mode 29944 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/x86_64/libnss_db.so.2 has been opened with mode 29944 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/libnss_db.so.2 has been opened with mode 29944 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:37 2016] File /usr/lib/x86_64-linux-gnu/tls/x86_64/libnss_db.so.2 has been opened with mode 29944 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:37 2016] File /usr/lib/x86_64-linux-gnu/tls/libnss_db.so.2 has been opened with mode 29944 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:37 2016] File /usr/lib/x86_64-linux-gnu/x86_64/libnss_db.so.2 has been opened with mode 29944 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:37 2016] File /usr/lib/x86_64-linux-gnu/libnss_db.so.2 has been opened with mode 29944 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:37 2016] File /lib/tls/x86_64/libnss_db.so.2 has been opened with mode 29944 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:37 2016] File /lib/tls/libnss_db.so.2 has been opened with mode 29944 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64/libnss_db.so.2 has been opened with mode 29944 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:37 2016] File /lib/libnss_db.so.2 has been opened with mode 29944 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:37 2016] File /usr/lib/tls/x86_64/libnss_db.so.2 has been opened with mode 29944 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:37 2016] File /usr/lib/tls/libnss_db.so.2 has been opened with mode 29944 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:37 2016] File /usr/lib/x86_64/libnss_db.so.2 has been opened with mode 29944 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:37 2016] File /usr/lib/libnss_db.so.2 has been opened with mode 29944 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20
+[Sun Nov 27 17:34:37 2016] File /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 has been opened with mode 16744 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libpthread.so.0
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/libpthread.so.0 has been opened with mode 24936 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /etc/ld.so.cache
+[Sun Nov 27 17:34:37 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libpthread.so.0
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/libpthread.so.0 has been opened with mode 16744 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 has been opened with mode 24936 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libnss_files.so.2
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/libnss_files.so.2 has been opened with mode 29944 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 has been opened with mode 16744 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libc.so.6
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/libc.so.6 has been opened with mode 24936 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /etc/services
+[Sun Nov 27 17:34:37 2016] File /etc/services has been opened with mode 438 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:37 2016] File /dev/urandom has been opened with mode 53552 and flags 0
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libc.so.6
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/libc.so.6 has been opened with mode 16744 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libz.so.1
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/libz.so.1 has been opened with mode 13520 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /usr/share/mysql/charsets/Index.xml
+[Sun Nov 27 17:34:37 2016] File /usr/share/mysql/charsets/Index.xml has been opened with mode 416 and flags 0
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libz.so.1
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/libz.so.1 has been opened with mode 5328 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libdl.so.2
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/libdl.so.2 has been opened with mode 13520 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20
+[Sun Nov 27 17:34:37 2016] File /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 has been opened with mode 438 and flags 0
+
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libdl.so.2
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/libdl.so.2 has been opened with mode 5328 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+[Sun Nov 27 17:34:37 2016] File /usr/lib/x86_64-linux-gnu/libstdc++.so.6 has been opened with mode 13520 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+[Sun Nov 27 17:34:37 2016] File /usr/lib/x86_64-linux-gnu/libstdc++.so.6 has been opened with mode 5328 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libm.so.6
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/libm.so.6 has been opened with mode 13520 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libm.so.6
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/libm.so.6 has been opened with mode 5328 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] REGULAR FILE
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libgcc_s.so.1
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/libgcc_s.so.1 has been opened with mode 13520 and flags 524288
+
+[Sun Nov 27 17:34:37 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libgcc_s.so.1
+[Sun Nov 27 17:34:37 2016] File /lib/x86_64-linux-gnu/libgcc_s.so.1 has been opened with mode 5328 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:40 2016] File . has been opened with mode 45312 and flags 591872
+
+[Sun Nov 27 17:34:40 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:40 2016] File . has been opened with mode 45312 and flags 591872
+
+[Sun Nov 27 17:34:40 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:40 2016] File /dev/null has been opened with mode 438 and flags 577
+
+[Sun Nov 27 17:34:40 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:40 2016] File /dev/null has been opened with mode 438 and flags 577
+
+[Sun Nov 27 17:34:40 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:40 2016] File /usr/src/linux-stable/Antivirus/test_programs/c_progs/ has been opened with mode 55 and flags 591872
+
+[Sun Nov 27 17:34:40 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:40 2016] File /usr/src/linux-stable/Antivirus/test_programs/c_progs/ has been opened with mode 55 and flags 591872
+
+[Sun Nov 27 17:34:40 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:40 2016] File /tmp/sh-thd-2901620929162053254 has been opened with mode 384 and flags 705
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] No virus found, file /tmp/sh-thd-2901620929162053254 can be opened
+[Sun Nov 27 17:34:40 2016] File /tmp/sh-thd-2901620929162053254 has been opened with mode 384 and flags 0
+
+[Sun Nov 27 17:34:40 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:40 2016] File /dev/null has been opened with mode 438 and flags 577
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] No virus found, file /etc/ld.so.cache can be opened
+[Sun Nov 27 17:34:40 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] No virus found, file /etc/ld.so.cache can be opened
+[Sun Nov 27 17:34:40 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20
+[Sun Nov 27 17:34:40 2016] File /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 has been opened with mode 12648 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /etc/ld.so.cache
+[Sun Nov 27 17:34:40 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20
+[Sun Nov 27 17:34:40 2016] File /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 has been opened with mode 12648 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libpthread.so.0
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libpthread.so.0 has been opened with mode 12648 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20
+[Sun Nov 27 17:34:40 2016] File /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 has been opened with mode 61800 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libpthread.so.0
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libpthread.so.0 has been opened with mode 12648 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 has been opened with mode 12648 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libpthread.so.0
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libpthread.so.0 has been opened with mode 61800 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 has been opened with mode 12648 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libc.so.6
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libc.so.6 has been opened with mode 12648 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 has been opened with mode 61800 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libc.so.6
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libc.so.6 has been opened with mode 12648 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libz.so.1
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libz.so.1 has been opened with mode 1232 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libc.so.6
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libc.so.6 has been opened with mode 61800 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libz.so.1
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libz.so.1 has been opened with mode 1232 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libdl.so.2
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libdl.so.2 has been opened with mode 1232 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libz.so.1
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libz.so.1 has been opened with mode 50384 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libdl.so.2
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libdl.so.2 has been opened with mode 1232 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+[Sun Nov 27 17:34:40 2016] File /usr/lib/x86_64-linux-gnu/libstdc++.so.6 has been opened with mode 1232 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libdl.so.2
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libdl.so.2 has been opened with mode 50384 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libm.so.6
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libm.so.6 has been opened with mode 1232 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+[Sun Nov 27 17:34:40 2016] File /usr/lib/x86_64-linux-gnu/libstdc++.so.6 has been opened with mode 1232 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+[Sun Nov 27 17:34:40 2016] File /usr/lib/x86_64-linux-gnu/libstdc++.so.6 has been opened with mode 50384 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libgcc_s.so.1
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libgcc_s.so.1 has been opened with mode 1232 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libm.so.6
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libm.so.6 has been opened with mode 1232 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libm.so.6
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libm.so.6 has been opened with mode 50384 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libgcc_s.so.1
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libgcc_s.so.1 has been opened with mode 1232 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libgcc_s.so.1
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libgcc_s.so.1 has been opened with mode 50384 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:40 2016] File . has been opened with mode 45312 and flags 591872
+
+[Sun Nov 27 17:34:40 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:40 2016] File . has been opened with mode 45312 and flags 591872
+
+[Sun Nov 27 17:34:40 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:40 2016] File /dev/null has been opened with mode 438 and flags 577
+
+[Sun Nov 27 17:34:40 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:40 2016] File /dev/null has been opened with mode 438 and flags 577
+
+[Sun Nov 27 17:34:40 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:40 2016] File /usr/src/linux-stable/Antivirus/test_programs/c_progs/ has been opened with mode 55 and flags 591872
+
+[Sun Nov 27 17:34:40 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:40 2016] File /usr/src/linux-stable/Antivirus/test_programs/c_progs/ has been opened with mode 55 and flags 591872
+
+[Sun Nov 27 17:34:40 2016] Unable to determine if regular file or dir or link
+[Sun Nov 27 17:34:40 2016] File /tmp/sh-thd-5803241858050729986 has been opened with mode 384 and flags 705
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] No virus found, file /tmp/sh-thd-5803241858050729986 can be opened
+[Sun Nov 27 17:34:40 2016] File /tmp/sh-thd-5803241858050729986 has been opened with mode 384 and flags 0
+
+[Sun Nov 27 17:34:40 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:40 2016] File /dev/null has been opened with mode 438 and flags 577
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] No virus found, file /etc/ld.so.cache can be opened
+[Sun Nov 27 17:34:40 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] No virus found, file /etc/ld.so.cache can be opened
+[Sun Nov 27 17:34:40 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20
+[Sun Nov 27 17:34:40 2016] File /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 has been opened with mode 8552 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20
+[Sun Nov 27 17:34:40 2016] File /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 has been opened with mode 49512 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /etc/ld.so.cache
+[Sun Nov 27 17:34:40 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libpthread.so.0
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libpthread.so.0 has been opened with mode 8552 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20
+[Sun Nov 27 17:34:40 2016] File /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 has been opened with mode 57704 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libpthread.so.0
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libpthread.so.0 has been opened with mode 49512 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 has been opened with mode 8552 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libpthread.so.0
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libpthread.so.0 has been opened with mode 57704 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 has been opened with mode 49512 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libc.so.6
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libc.so.6 has been opened with mode 8552 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 has been opened with mode 57704 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libc.so.6
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libc.so.6 has been opened with mode 49512 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libz.so.1
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libz.so.1 has been opened with mode 62672 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libc.so.6
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libc.so.6 has been opened with mode 57704 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libz.so.1
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libz.so.1 has been opened with mode 38096 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libdl.so.2
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libdl.so.2 has been opened with mode 62672 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libz.so.1
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libz.so.1 has been opened with mode 46288 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libdl.so.2
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libdl.so.2 has been opened with mode 38096 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+[Sun Nov 27 17:34:40 2016] File /usr/lib/x86_64-linux-gnu/libstdc++.so.6 has been opened with mode 62672 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libdl.so.2
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libdl.so.2 has been opened with mode 46288 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+[Sun Nov 27 17:34:40 2016] File /usr/lib/x86_64-linux-gnu/libstdc++.so.6 has been opened with mode 38096 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libm.so.6
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libm.so.6 has been opened with mode 62672 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+[Sun Nov 27 17:34:40 2016] File /usr/lib/x86_64-linux-gnu/libstdc++.so.6 has been opened with mode 46288 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libm.so.6
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libm.so.6 has been opened with mode 38096 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libgcc_s.so.1
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libgcc_s.so.1 has been opened with mode 62672 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libm.so.6
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libm.so.6 has been opened with mode 46288 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] REGULAR FILE
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libgcc_s.so.1
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libgcc_s.so.1 has been opened with mode 38096 and flags 524288
+
+[Sun Nov 27 17:34:40 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libgcc_s.so.1
+[Sun Nov 27 17:34:40 2016] File /lib/x86_64-linux-gnu/libgcc_s.so.1 has been opened with mode 46288 and flags 524288
+
+[Sun Nov 27 17:34:41 2016] REGULAR FILE
+[Sun Nov 27 17:34:41 2016] No virus found, file /etc/ld.so.cache can be opened
+[Sun Nov 27 17:34:41 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:41 2016] REGULAR FILE
+[Sun Nov 27 17:34:41 2016] REGULAR FILE
+[Sun Nov 27 17:34:41 2016] No virus found, file /etc/ld.so.cache can be opened
+[Sun Nov 27 17:34:41 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:41 2016] REGULAR FILE
+[Sun Nov 27 17:34:41 2016] REGULAR FILE
+[Sun Nov 27 17:34:41 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libc.so.6
+[Sun Nov 27 17:34:41 2016] File /lib/x86_64-linux-gnu/libc.so.6 has been opened with mode 16744 and flags 524288
+
+[Sun Nov 27 17:34:41 2016] REGULAR FILE
+[Sun Nov 27 17:34:41 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20
+[Sun Nov 27 17:34:41 2016] File /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 has been opened with mode 33128 and flags 524288
+
+[Sun Nov 27 17:34:41 2016] REGULAR FILE
+[Sun Nov 27 17:34:41 2016] Error -14 while determining presence of virus in file /etc/ld.so.cache
+[Sun Nov 27 17:34:41 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:41 2016] REGULAR FILE
+[Sun Nov 27 17:34:41 2016] Error -14 while determining presence of virus in file /usr/lib/locale/locale-archive
+[Sun Nov 27 17:34:41 2016] File /usr/lib/locale/locale-archive has been opened with mode 0 and flags 524288
+
+[Sun Nov 27 17:34:41 2016] REGULAR FILE
+[Sun Nov 27 17:34:41 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20
+[Sun Nov 27 17:34:41 2016] File /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 has been opened with mode 4456 and flags 524288
+
+[Sun Nov 27 17:34:41 2016] REGULAR FILE
+[Sun Nov 27 17:34:41 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libpthread.so.0
+[Sun Nov 27 17:34:41 2016] File /lib/x86_64-linux-gnu/libpthread.so.0 has been opened with mode 33128 and flags 524288
+
+[Sun Nov 27 17:34:41 2016] REGULAR FILE
+[Sun Nov 27 17:34:41 2016] Error -14 while determining presence of virus in file test_programs/c_progs/backtrack
+[Sun Nov 27 17:34:41 2016] File test_programs/c_progs/backtrack has been opened with mode 0 and flags 0
+
+[Sun Nov 27 17:34:41 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libpthread.so.0
+[Sun Nov 27 17:34:41 2016] File /lib/x86_64-linux-gnu/libpthread.so.0 has been opened with mode 4456 and flags 524288
+
+[Sun Nov 27 17:34:41 2016] REGULAR FILE
+[Sun Nov 27 17:34:41 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+[Sun Nov 27 17:34:41 2016] File /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 has been opened with mode 33128 and flags 524288
+
+[Sun Nov 27 17:34:41 2016] REGULAR FILE
+[Sun Nov 27 17:34:41 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+[Sun Nov 27 17:34:41 2016] File /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 has been opened with mode 4456 and flags 524288
+
+[Sun Nov 27 17:34:41 2016] REGULAR FILE
+[Sun Nov 27 17:34:41 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libc.so.6
+[Sun Nov 27 17:34:41 2016] File /lib/x86_64-linux-gnu/libc.so.6 has been opened with mode 33128 and flags 524288
+
+[Sun Nov 27 17:34:41 2016] REGULAR FILE
+[Sun Nov 27 17:34:41 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libc.so.6
+[Sun Nov 27 17:34:41 2016] File /lib/x86_64-linux-gnu/libc.so.6 has been opened with mode 4456 and flags 524288
+
+[Sun Nov 27 17:34:41 2016] REGULAR FILE
+[Sun Nov 27 17:34:41 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libz.so.1
+[Sun Nov 27 17:34:41 2016] File /lib/x86_64-linux-gnu/libz.so.1 has been opened with mode 21712 and flags 524288
+
+[Sun Nov 27 17:34:41 2016] REGULAR FILE
+[Sun Nov 27 17:34:41 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libz.so.1
+[Sun Nov 27 17:34:41 2016] File /lib/x86_64-linux-gnu/libz.so.1 has been opened with mode 58576 and flags 524288
+
+[Sun Nov 27 17:34:41 2016] REGULAR FILE
+[Sun Nov 27 17:34:41 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libdl.so.2
+[Sun Nov 27 17:34:41 2016] File /lib/x86_64-linux-gnu/libdl.so.2 has been opened with mode 21712 and flags 524288
+
+[Sun Nov 27 17:34:41 2016] REGULAR FILE
+[Sun Nov 27 17:34:41 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libdl.so.2
+[Sun Nov 27 17:34:41 2016] File /lib/x86_64-linux-gnu/libdl.so.2 has been opened with mode 58576 and flags 524288
+
+[Sun Nov 27 17:34:41 2016] REGULAR FILE
+[Sun Nov 27 17:34:41 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+[Sun Nov 27 17:34:41 2016] File /usr/lib/x86_64-linux-gnu/libstdc++.so.6 has been opened with mode 21712 and flags 524288
+
+[Sun Nov 27 17:34:41 2016] REGULAR FILE
+[Sun Nov 27 17:34:41 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+[Sun Nov 27 17:34:41 2016] File /usr/lib/x86_64-linux-gnu/libstdc++.so.6 has been opened with mode 58576 and flags 524288
+
+[Sun Nov 27 17:34:41 2016] REGULAR FILE
+[Sun Nov 27 17:34:41 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libm.so.6
+[Sun Nov 27 17:34:41 2016] File /lib/x86_64-linux-gnu/libm.so.6 has been opened with mode 21712 and flags 524288
+
+[Sun Nov 27 17:34:41 2016] REGULAR FILE
+[Sun Nov 27 17:34:41 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libm.so.6
+[Sun Nov 27 17:34:41 2016] File /lib/x86_64-linux-gnu/libm.so.6 has been opened with mode 58576 and flags 524288
+
+[Sun Nov 27 17:34:41 2016] REGULAR FILE
+[Sun Nov 27 17:34:41 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libgcc_s.so.1
+[Sun Nov 27 17:34:41 2016] File /lib/x86_64-linux-gnu/libgcc_s.so.1 has been opened with mode 21712 and flags 524288
+
+[Sun Nov 27 17:34:41 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libgcc_s.so.1
+[Sun Nov 27 17:34:41 2016] File /lib/x86_64-linux-gnu/libgcc_s.so.1 has been opened with mode 58576 and flags 524288
+
+[Sun Nov 27 17:34:47 2016] REGULAR FILE
+[Sun Nov 27 17:34:47 2016] No virus found, file samples can be opened
+[Sun Nov 27 17:34:47 2016] File samples has been opened with mode 438 and flags 577
+
+[Sun Nov 27 17:34:47 2016] REGULAR FILE
+[Sun Nov 27 17:34:47 2016] REGULAR FILE
+[Sun Nov 27 17:34:47 2016] Error -14 while determining presence of virus in file /etc/ld.so.cache
+[Sun Nov 27 17:34:47 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:47 2016] REGULAR FILE
+[Sun Nov 27 17:34:47 2016] Error -14 while determining presence of virus in file /etc/ld.so.cache
+[Sun Nov 27 17:34:47 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:47 2016] REGULAR FILE
+[Sun Nov 27 17:34:47 2016] No virus found, file /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 can be opened
+[Sun Nov 27 17:34:47 2016] File /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 has been opened with mode 360 and flags 524288
+
+[Sun Nov 27 17:34:47 2016] REGULAR FILE
+[Sun Nov 27 17:34:47 2016] REGULAR FILE
+[Sun Nov 27 17:34:47 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libtinfo.so.5
+[Sun Nov 27 17:34:47 2016] File /lib/x86_64-linux-gnu/libtinfo.so.5 has been opened with mode 49512 and flags 524288
+
+[Sun Nov 27 17:34:47 2016] REGULAR FILE
+[Sun Nov 27 17:34:47 2016] Error -14 while determining presence of virus in file /etc/ld.so.cache
+[Sun Nov 27 17:34:47 2016] File /etc/ld.so.cache has been opened with mode 1 and flags 524288
+
+[Sun Nov 27 17:34:47 2016] REGULAR FILE
+[Sun Nov 27 17:34:47 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/librt.so.1
+[Sun Nov 27 17:34:47 2016] File /lib/x86_64-linux-gnu/librt.so.1 has been opened with mode 49512 and flags 524288
+
+[Sun Nov 27 17:34:47 2016] REGULAR FILE
+[Sun Nov 27 17:34:47 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libpthread.so.0
+[Sun Nov 27 17:34:47 2016] File /lib/x86_64-linux-gnu/libpthread.so.0 has been opened with mode 360 and flags 524288
+
+[Sun Nov 27 17:34:47 2016] REGULAR FILE
+[Sun Nov 27 17:34:47 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20
+[Sun Nov 27 17:34:47 2016] File /usr/lib/x86_64-linux-gnu/libmysqlclient.so.20 has been opened with mode 33128 and flags 524288
+
+[Sun Nov 27 17:34:47 2016] REGULAR FILE
+[Sun Nov 27 17:34:47 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libc.so.6
+[Sun Nov 27 17:34:47 2016] File /lib/x86_64-linux-gnu/libc.so.6 has been opened with mode 49512 and flags 524288
+
+[Sun Nov 27 17:34:47 2016] REGULAR FILE
+[Sun Nov 27 17:34:47 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+[Sun Nov 27 17:34:47 2016] File /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 has been opened with mode 360 and flags 524288
+
+[Sun Nov 27 17:34:47 2016] REGULAR FILE
+[Sun Nov 27 17:34:47 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libpthread.so.0
+[Sun Nov 27 17:34:47 2016] File /lib/x86_64-linux-gnu/libpthread.so.0 has been opened with mode 33128 and flags 524288
+
+[Sun Nov 27 17:34:47 2016] REGULAR FILE
+[Sun Nov 27 17:34:47 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libpthread.so.0
+[Sun Nov 27 17:34:47 2016] File /lib/x86_64-linux-gnu/libpthread.so.0 has been opened with mode 39352 and flags 524288
+
+[Sun Nov 27 17:34:47 2016] REGULAR FILE
+[Sun Nov 27 17:34:47 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libc.so.6
+[Sun Nov 27 17:34:47 2016] File /lib/x86_64-linux-gnu/libc.so.6 has been opened with mode 360 and flags 524288
+
+[Sun Nov 27 17:34:47 2016] REGULAR FILE
+[Sun Nov 27 17:34:47 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+[Sun Nov 27 17:34:47 2016] File /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 has been opened with mode 33128 and flags 524288
+
+[Sun Nov 27 17:34:47 2016] REGULAR FILE
+[Sun Nov 27 17:34:47 2016] Error -14 while determining presence of virus in file /usr/lib/locale/locale-archive
+[Sun Nov 27 17:34:47 2016] File /usr/lib/locale/locale-archive has been opened with mode 0 and flags 524288
+
+[Sun Nov 27 17:34:47 2016] NOT A REGULAR FILE
+[Sun Nov 27 17:34:47 2016] File /dev/kmsg has been opened with mode 0 and flags 2048
+
+[Sun Nov 27 17:34:47 2016] REGULAR FILE
+[Sun Nov 27 17:34:47 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libz.so.1
+[Sun Nov 27 17:34:47 2016] File /lib/x86_64-linux-gnu/libz.so.1 has been opened with mode 54480 and flags 524288
+
+[Sun Nov 27 17:34:47 2016] REGULAR FILE
+[Sun Nov 27 17:34:47 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libc.so.6
+[Sun Nov 27 17:34:47 2016] File /lib/x86_64-linux-gnu/libc.so.6 has been opened with mode 33128 and flags 524288
+
+[Sun Nov 27 17:34:47 2016] REGULAR FILE
+[Sun Nov 27 17:34:47 2016] Error -14 while determining presence of virus in file /etc/localtime
+[Sun Nov 27 17:34:47 2016] File /etc/localtime has been opened with mode 438 and flags 524288
+
+[Sun Nov 27 17:34:47 2016] REGULAR FILE
+[Sun Nov 27 17:34:47 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libdl.so.2
+[Sun Nov 27 17:34:47 2016] File /lib/x86_64-linux-gnu/libdl.so.2 has been opened with mode 54480 and flags 524288
+
+[Sun Nov 27 17:34:47 2016] REGULAR FILE
+[Sun Nov 27 17:34:47 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libz.so.1
+[Sun Nov 27 17:34:47 2016] File /lib/x86_64-linux-gnu/libz.so.1 has been opened with mode 21712 and flags 524288
+
+[Sun Nov 27 17:34:47 2016] REGULAR FILE
+[Sun Nov 27 17:34:47 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+[Sun Nov 27 17:34:47 2016] File /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache has been opened with mode 0 and flags 0
+
+[Sun Nov 27 17:34:47 2016] Error -14 while determining presence of virus in file /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+[Sun Nov 27 17:34:47 2016] File /usr/lib/x86_64-linux-gnu/libstdc++.so.6 has been opened with mode 54480 and flags 524288
+
+[Sun Nov 27 17:34:47 2016] REGULAR FILE
+[Sun Nov 27 17:34:47 2016] Error -14 while determining presence of virus in file /lib/x86_64-linux-gnu/libdl.so.2
+[Sun Nov 27 17:34:47 2016] File /lib/x86_64-linux-gnu/libdl.so.2 has been opened with mode 21712 and flags 524288
+
+[Sun Nov 27 17:34:47 2016] REGULAR FILE
