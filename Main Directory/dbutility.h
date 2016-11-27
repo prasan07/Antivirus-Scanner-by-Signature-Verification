@@ -16,6 +16,9 @@ unsigned int sig_count;
 char * signatures;
 }blacklist_from_db;
 
+//Method to verify tables exist
+extern int verify_tables(MYSQL* conn);
+
 //Method to retrieve the sha256 hash of the file given the path
 extern char* getsha256(char * file_path);
 

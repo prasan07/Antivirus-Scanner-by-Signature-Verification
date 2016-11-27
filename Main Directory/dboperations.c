@@ -10,28 +10,12 @@
 #include <stdlib.h>
 #include <string.h>
 
-/*MYSQL *conn = NULL;
-	
-int db_init(){
-	conn = mysql_init(NULL);
-        if (!mysql_real_connect(conn, SERVER_LOC,
-                                USER, PASS, DATABASE, 0, NULL, 0)) {
-                fprintf(stderr, "%s\n", mysql_error(conn));
-                return -1;
-        }	
-}
-
-void db_close(){
-        if(conn!=NULL)
-                mysql_close(conn);
-}*/
-
 /*
 function        : method to check if the tables are present or create them
 return value    : returns 0 on success, -1 on failure to create tables
 parameters      : MYSQL connection object
 */
-extern int verify_tables(MYSQL *conn){
+int verify_tables(MYSQL *conn){
 	char query[300];
 	MYSQL_RES *res;
         int result = 0;
@@ -112,7 +96,7 @@ struct signatures *getstructures(){
                 result = NULL;
 		goto out;
         }
-	/* execute SQL query */
+	// execute SQL query 
         if (mysql_query(conn, "select * from blacklist")) {
                 fprintf(stderr, "%s\n", mysql_error(conn));
 		free(result);
@@ -126,7 +110,7 @@ struct signatures *getstructures(){
 		result = NULL;
 		goto out;
 	}
-	/* find the total size of the strings in the table */
+	// find the total size of the strings in the table
 	while ((row = mysql_fetch_row(res)))
 	{
 		total_length+=strlen(row[1])+1;
@@ -139,7 +123,7 @@ struct signatures *getstructures(){
 	}
 	result->sig_count = row_count;
 	mysql_data_seek(res, 0);
-	/*copy the strings in the structure one by one*/
+	//copy the strings in the structure one by one
 	while ((row = mysql_fetch_row(res)))
 	{
 		memcpy(result->signatures + current_loc, row[1], strlen(row[1]));  
@@ -148,7 +132,7 @@ struct signatures *getstructures(){
                 current_loc++;
 	}
 out:
-	/*perform clean up and exit*/
+	//perform clean up and exit
 	if(res!=NULL)
 		mysql_free_result(res);
 	if(conn!=NULL)
@@ -273,7 +257,7 @@ int isWhitelisted(char * file_path){
 	MYSQL *conn = NULL;
 
         conn = mysql_init(NULL);
-        /* Connect to local database */
+        // Connect to local database
         if (!mysql_real_connect(conn, SERVER_LOC,
                                 USER, PASS, DATABASE, 0, NULL, 0)) {
                 fprintf(stderr, "%s\n", mysql_error(conn));
@@ -286,14 +270,14 @@ int isWhitelisted(char * file_path){
                 result = -1;
 		goto out;
         }
-	/*retrieve hash of the given file*/
+	//retrieve hash of the given file
 	hash_val = getsha256(file_path);
         sprintf(query, "select * from whitelist where hash = '%s'", hash_val);
 #ifdef DEBUG
 	printf("%s \n", hash_val);
 	printf("%s \n", query);
 #endif
-	/*check for the hash in the whitelist table*/
+	//check for the hash in the whitelist table
 	if (mysql_query(conn, query)) {
                 fprintf(stderr, "%s\n", mysql_error(conn));
                 result = -1;
@@ -306,7 +290,7 @@ int isWhitelisted(char * file_path){
 		result = 0;
 	}
 out:
-	/*perform clean up and exit*/
+	//perform clean up and exit
 	if(res!=NULL)
 		mysql_free_result(res);
 	if(conn!=NULL)
