@@ -227,6 +227,18 @@ REPORT            -     Project Report
 antivirus.c       -     Code for the antivirus userspace executable
 trapper.c	  - 	Module to intercept open and exec-related system calls, and invoke the userspace
 			virus-detection logic
+dboperations.c    -     This file contains all the main db operation APIs. The definitions of the following files are present.
+                        1. verify_tables(MYSQL* conn)   - tests whether the given function has all 
+                                                          the required db tables(whitelist, blacklist)
+                        2. isWhitelisted(char* filepath)- generates the sha256 of the given file and  
+                                                           checks if the generated hash is present in the whitelist.
+                        3. getStructures()              - retrieves all the blacklist signatures from DB,
+                                                          formats it to a structure and returns to the caller.
+                        4. updateStructures(int flag)   - retrieve the data from the remote db server, and update
+                                                          the local db with that value.
+getsha256.c      -      Generates the sha256 hash of the filepath passed to it and returns it in 64 char long string.
+dbutility.h      -      The Main db header file contains all the API calls.
+dbwhitelist.h    -      This program populates the hash value into the db whitelist table for known files.
 
 The following set of files were used from a reference code in github, for the purpose of hooking into
 sys_execve and sys_execveat. Unlike the sys_open system call, for which the syscall_table's entry
