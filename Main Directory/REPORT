@@ -143,8 +143,8 @@ process.
 	3. If the file is a non-whitelist execuatable, retrieve the blacklist info from the database using
 the getStructures() API call and pack them inside a user defined structure.
 
-	4. The blacklist signature retrieve from the database is in a user readable hexstring format.
-These signatures are formatted to a byte array.
+	4. The blacklist signature retrieved from the database is in hexstring format.
+These hex signatures are formatted to a byte array signatures.
 
 	5. The formatted bytearray is memcompared with a file binary to look for the pattern. If there is
 memcompare match, then the file is flagged as a blacklist and intimated to the controller program.
@@ -244,7 +244,14 @@ udis86.h and libudis86/*
                         inspect the input stream of machine code bytes)
 Makefile	  -	To compile and build the modules
 
-<Guys add details of .c and .h files here>
+blacklist.h	  -	Exposes blacklist_scan function as an interface to the controller program and
+			contains the header files required for dbblacklist.c and blacklist.c
+
+blacklist.c	  - 	blacklist_scan implementation that performs byte-wise comparison between file binary
+			and blacklist signatures.
+
+dbblacklist.c	  -	A user program that updates newly discovered blacklists to the database.
+
 ----------------------------------------------------------------------------------------------------
 
 TESTING:
@@ -282,7 +289,8 @@ REFERENCES:
 
 stackoverflow.com and linux man pages have been invaluable references.
 
-<Add references used by Prasanth>
+Conversion of hex string to bytes(unsigned char):
+http://stackoverflow.com/questions/18267803/how-to-correctly-convert-a-hex-string-to-byte-array-in-c
 
 Kernel-Driver:
 1.  Patch code of Prof Erez Zadok(that had been in used in one of the OS assignments) to add a new system call
