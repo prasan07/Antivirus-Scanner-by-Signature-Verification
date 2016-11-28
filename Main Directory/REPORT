@@ -64,11 +64,14 @@ API Calls:
 	by a '\0' along with the number of such strings. This method returns a NULL on error and 
 	a valid struct object on success.
 
-2. int update_structures()
+2. int update_structures(int flag)
 	This call removes existing values in both the tables, connects to a remote database, gets 
 	the new values and inserts them into the local database. The entire operation is performed
 	as a single transaction. In case of failure, the database will still be in a stable state.
 	This method returns -1 on error, and 0 on success.
+	0 - update both tables
+	1 - update whitelist table only
+	2 - update blacklist table only
 
 3. int isWhitelisted(char * file_path)
 	This method gets the file location as input, calculates the sha256 hash value of the file,
