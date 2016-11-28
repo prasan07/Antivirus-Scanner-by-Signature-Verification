@@ -23,13 +23,14 @@ The antivirus runs in two scanning modes:
 
         i) On Demand Scanning:
            In On Demand scanning, the user can run a program to scan a file, or a directory
-           containing files, e.g. antivirus-scan /home/jack/Downloads.
+           containing files, e.g. ./antivirus /home/jack/Downloads.
 
         ii) On Access Scanning:
            In On Access scanning, in order to protect the user, a kernel driver hooks into the
            appropriate system calls (e.g. open, execve, and execveat) and
            scans the file before it is opened. If the file is infected, then the antivirus
-           refuses to open the file. Additionally, a message is printed in the kernel log to indicate that the file 	       is infected.
+           refuses to open the file. Additionally, a message is printed in the kernel log to indicate
+           that the file is quarantined.
 
 Details of usage can be found in the "INSTRUCTIONS" section.
 ----------------------------------------------------------------------------------------------------
@@ -53,8 +54,8 @@ blacklist table:
 2. signature	- variable length signature having max 65535 characters.
 
 The DB modules consists of three API calls, one API call for checking whether a hash value exists 
-in the database, one for retrieving a list of all the blacklist signatures, and the last one for getting 
-updates from the remote server. 
+in the database, one for retrieving a list of all the blacklist signatures, and the last one for
+getting updates from the remote server. 
 
 API Calls:
 
@@ -82,10 +83,7 @@ database always remains in a stable state.
 The hash function used in our application is SHA256, which gives a 32 byte hash value for each
 hashed file.  
 
-<Add about Kernel Driver - Arun>
-
-
-				Kernel Driver
+Kernel Driver:
 
 We used a driver as a module to intercept the open and exec family of system calls.
 
@@ -152,11 +150,6 @@ These signatures are formatted to a byte array.
 memcompare match, then the file is flagged as a blacklist and intimated to the controller program.
 
 
-
-
-
-
-
 Antivirus Userspace executable:
 
 For the antivirus userspace application, we store the list of files that have been flagged as mali-
@@ -168,10 +161,11 @@ that displays it in a message box.
 we decided to add recursive traversal of subdirectories and files so as to scan all the contents
 within a directory.
 So, to keep track of the current directory namespace, we maintain a stack that stores the index,
-within the namespace, the location where the next directory name/file names needs to be added to
+within the namespace - the location within the namespace where the next directory
+name/file names needs to be added to
 
 The antivirus also supports scanning on softlinks - if a linked file is detected as a virus, its
-permissions are removed but the link to it is renamed with a ".virus" added at the end of the link
+permissions are removed but the softlink to it is renamed with a ".virus" added at the end of the link
 name.
 
 For updating the virus database definitions, the antivirus makes use of the updateStructures()
@@ -182,24 +176,23 @@ INSTRUCTIONS:
 
 Our antivirus works with *nix machines.
 
-We have provided a Makefile that can be used to build our antivirus as follows:
+We have provided a script, compile.sh, that can be used to build our antivirus as follows:
 
-        i) Download the source from <link>
+        i) Download the source from 
 
-        ii) Extract the source files and use the following commands:
+        ii) Build the source files using the following commands:
                 
-                make - To compile all the antivirus source code
+                sh compile.sh
 
-                make clean - clean up
+The antivirus can currently support only On Demand scanning mode. 
+For On Demand scanning of files or to update the antivirus definitions from remote repo:
 
-The antivirus can run in two modes (described in the "DESCRIPTION" section) - On Demand and On Access
-
-        i) For On Demand scanning of files or to update the antivirus definitions from remote repo:
-
-                ./antivirus (-u|path to file/directory)
+                ./antivirus (-u(a|b|w)|path to file/directory)
 
                 Description of arguments:
-                -u                      - Update database definitions
+                -ua                     - Update all database definitions
+                -ub                     - Update blacklist definitions
+                -uw                     - Update whitelist definitions
                 path to file/directory  - Path of file/directory to scan
 
         ii) For On Access scanning,
@@ -213,7 +206,7 @@ The antivirus uses a MySQL DB backend to store virus definitions that are used i
 should be installed on the user machine for the antivirus software to be fully effective.
 
 MySQL installation guide can be found at:
-        https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-14-04
+https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-14-04
 
 In order to update virus definitions, we had to add firewall whitelisting and grant privileges on
 the remote MySQL DB as follows:
@@ -221,18 +214,24 @@ the remote MySQL DB as follows:
 /sbin/iptables -A INPUT -i <interface> -p tcp --destination-port 3306 -j ACCEPT
 
 grant all privileges on "database.tables" to 'username'@'%' identified by 'passphrase'
+
+edit /etc/mysql/my.cnf
+change line with bind-address to "bind-address = *"
 ----------------------------------------------------------------------------------------------------
 
 MAIN FILES:
 
-The details of the antivirus source files are as follows:
+The details of the main antivirus source files are as follows:
 
 REPORT            -     Project Report      
 antivirus.c       -     Code for the antivirus userspace executable
 trapper.c	  - 	Module to intercept open and exec-related system calls, and invoke the userspace
 			virus-detection logic
 
-The following set of files were used from a reference code in github, for the purpose of hooking into sys_execve and sys_execveat. Unlike the sys_open system call, for which the syscall_table's entry corresponding to sys_open could be made to point to a custom-defined function, the sys_execve system call needed to be handled differently because assembly stubs were being added to the system call :
+The following set of files were used from a reference code in github, for the purpose of hooking into
+sys_execve and sys_execveat. Unlike the sys_open system call, for which the syscall_table's entry
+corresponding to sys_open could be made to point to a custom-defined function, the sys_execve system call
+needed to be handled differently because assembly stubs were being added to the system call :
 
 mem.h and mem.c	  -	Helper functions to determine the actual pointer to the system call within the stub,
 			 and hook to that	
@@ -241,7 +240,8 @@ The following files were used from the udis86 open source library for x86 archit
 disassembling :
 
 udis86.h and libudis86/* 
-		  -	Functions of the disassembler engine(to inspect the input stream of machine code bytes)
+		  -	Functions of the disassembler engine(to
+                        inspect the input stream of machine code bytes)
 Makefile	  -	To compile and build the modules
 
 <Guys add details of .c and .h files here>
@@ -249,15 +249,32 @@ Makefile	  -	To compile and build the modules
 
 TESTING:
 
-a) On-access scanning:
+a) On-Demand scanning:
+        For testing, we created a set of C and C++ programs and stored in inside test_programs directory
+
+        Using test_script.sh shell script, we compile and sanitize the programs inside test_programs
+
+        We added signatures from some of the c and c++ programs into a text file, blacklist.txt.
+        Using the program, dbblacklist.c, We fed the signatures to the (remote/local) database
+        and ran on demand scans against the contents of test_programs
+
+        For whitelist, using the dbwhitelist utility, we create and populate SHA's of Linux Utilities and
+        Libraries that can be considered definitively as "Non-Viruses". We then tested on demand scanning of
+        these linux executables against this whitelist.
+
+        We verified virus definition updates by adding privileges for the local db user in the remote db,
+        adding appropriate firewall exceptions and modifying the remote db address in our code.
+        After re-compilation, we tested updates via "./antivirus -u(a|b|w)"
+
+b) On-access scanning:
 	Upon insertion of the module, using "insmod trapper.ko", the open and exec related system calls will be
 	intercepted.
 	Upon execution of a file containing a virus, it will remove the permissions of the file, append ".virus"
 	to the file and disallow execution of the file.
 	The dmesg log in the kernel must be checked to notice a message that the file is infected.
 	The standard linux utilities will be continuously opened and executed, without being affected in any way.
-	This could be verified by checking the dmesg logs to see that no such standard utility is reported as being
-	infected. Moreover, if such a thing happens, the user-detection logic would append the utility
+	This could be verified by checking the dmesg logs to see that no such standard utility is reported as
+        being infected. Moreover, if such a thing happens, the user-detection logic would append the utility
 	with a .virus, which would be noticed due to its impact on the system.
 ----------------------------------------------------------------------------------------------------
 
@@ -308,5 +325,10 @@ SHA256:
 2. http://stackoverflow.com/questions/7853156/calculate-sha256-of-a-file-using-openssl-libcrypto-in-c
 3. http://stackoverflow.com/questions/22880627/sha256-implementation-in-c
 
+Recursive Directory Scanning:
+1. https://stackoverflow.com/questions/8436841/how-to-recursively-list-directories-in-c-on-linux
+
+Using Xmessage Box:
+1: https//www.daniweb.com/programming/software-development/threads/42340/message-box-in-c 
 ----------------------------------------------------------------------------------------------------
 

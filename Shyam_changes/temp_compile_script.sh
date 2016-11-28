@@ -1,1 +1,2 @@
 gcc -Wall -Werror antivirus.c -I../Pras_changes -I../barani_changes -I/usr/include/mysql ../Pras_changes/blacklist.c ../barani_changes/dboperations.c ../barani_changes/getSha256.c -lm $(mysql_config --libs) -lcrypto -lssl -DDEBUG=1 -DERR=1 -o antivirus
+gcc -Wall -Werror ../barani_changes/dbwhitelist.c -I -I/usr/include/mysql -lm $(mysql_config --libs) -DDEBUG=1 -DERR=1 -o ../barani_changes/dbwhitelist
