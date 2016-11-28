@@ -145,7 +145,7 @@ Blacklist signature verification:
 On each file, signature verification is performed to scan and check for any blacklists.
 During each file scan, the following operations are performed:
 
-	1. Perform file stat mode validation and skip the scan process if it is an execuatable file.
+	1. Perform file stat mode validation and skip the scan process if it is an executable file.
 
 	2. Validate if the file is a whitelist using the isWhitelist() API call. If so, skip the scanning 
 process.
@@ -227,6 +227,13 @@ grant all privileges on "database.tables" to 'username'@'%' identified by 'passp
 
 edit /etc/mysql/my.cnf
 change line with bind-address to "bind-address = *"
+
+populating the DB:
+1. whitelist - for adding entries to whitelist table- run "./dbwhitelist" command after compilation using "sh compile.sh"
+
+2. blacklist - for adding entries to blacklist table- run "./dbblacklist" command after compilation using "sh compile.sh"
+
+	       The prompt will ask for a blacklist file location, enter "blacklist.txt" loc.
 ----------------------------------------------------------------------------------------------------
 
 MAIN FILES:
@@ -274,6 +281,8 @@ blacklist.h	  -	Exposes blacklist_scan function as an interface to the controlle
 blacklist.c	  - 	blacklist_scan implementation that performs byte-wise comparison between file binary
 			and blacklist signatures.
 dbblacklist.c	  -	A user program that updates newly discovered blacklists to the database.
+blacklist.txt     - 	file containing list all the blacklisted signatures, to be used when populating db
+			using "./dbblacklist" command.
 ----------------------------------------------------------------------------------------------------
 
 TESTING:
