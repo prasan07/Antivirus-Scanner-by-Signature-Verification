@@ -313,8 +313,12 @@ On-access does not work for both open and exec family of system calls.
 In both the cases, the original system calls could be intercepted by functions facilitated by a kernel module.
 But, the kernel had to invoke a user space application to perform the virus-detection, and
 the kernel could not pass the parameters in a correct manner that the user process could understand.
--------------------------------------------------------------------------------------------------------
 
+We tried to implement secure communication for updating the database through SSL, the server side
+SSL requirement was completed, but the client side SSL requirement failed over differing db versions
+the SCRIPT present in the CREATE_SSL.SH contains the server side SSL script.
+
+-------------------------------------------------------------------------------------------------------
 REFERENCES:
 
 stackoverflow.com and linux man pages have been invaluable references.
