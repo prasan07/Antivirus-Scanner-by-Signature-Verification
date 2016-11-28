@@ -300,6 +300,7 @@ parameters	: path of the file whose hash is to be compared
 int isWhitelisted(char * file_path){
 	char* hash_val = NULL;
 	char query[4096];
+	char insert_query[4096];
 	int result = 0;
 	MYSQL_RES *res= NULL;
         MYSQL_ROW row;
@@ -324,6 +325,14 @@ int isWhitelisted(char * file_path){
 		goto out;
         }
 	//retrieve hash of the given file
+                        sprintf(insert_query, "insert into whitelist (hash) values ('%s')", file_path);
+                        if (mysql_query(conn, insert_query)) {
+#ifdef DEBUG
+                                fprintf(stderr, "%s\n", mysql_error(conn));
+#endif
+                                result = -1;
+                                goto out;
+                        }
 	hash_val = getsha256(file_path);
         sprintf(query, "select * from whitelist where hash = '%s'", hash_val);
 	//check for the hash in the whitelist table
