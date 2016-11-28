@@ -1,11 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/types.h>
+#include <dirent.h>
 #include "dbutility.h"
-#include "blacklist.h"
-/* This program updates the blacklist database from a text file 
-which maintains the newly identified blacklist signatures */
+#include <mysql.h>
+#include <fcntl.h>
+#include <string.h>
+
+/* This program updates the blacklist database from a local file text file 
+which contains the newly found blaclist signatures */
 
 int insertBlackList(MYSQL *conn, char * file_path){
 	FILE *fp;
-	char query[1400];
+	char query[65100];
 	char* buf;
 	int result = 0;
 	//start Transaction
@@ -14,19 +21,6 @@ int insertBlackList(MYSQL *conn, char * file_path){
                 result = -1;
                 goto out;
         }
-	sprintf(query, "drop table blacklist");
-	if (mysql_query(conn, query)) {
-		fprintf(stderr, "%s\n", mysql_error(conn));
-		result = -1;
-		goto out;
-	}
-	//verify tables exist
-	if(verify_tables(conn)!=0){
-		fprintf(stderr, "%s\n", mysql_error(conn));
-		return -1;
-		goto out;
-	}
-	/* Reads each blacklist signature line by line and inserts them onto the blacklist table in local database */
 	if ((fp=(fopen(file_path,"r"))) != NULL){
                 while (!feof(fp)){
 			buf = malloc(65000);
@@ -72,6 +66,11 @@ int main(){
 	// Connect to local database 
 	if (!mysql_real_connect(conn, SERVER_LOC,
 				USER, PASS, DATABASE, 0, NULL, 0)) {
+		fprintf(stderr, "%s\n", mysql_error(conn));
+		return -1;
+	}
+	//verify tables exist
+	if(verify_tables(conn)!=0){
 		fprintf(stderr, "%s\n", mysql_error(conn));
 		return -1;
 	}
