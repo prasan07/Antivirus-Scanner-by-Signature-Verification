@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <stdlib.h>
 using namespace std;
 
 int main() {
@@ -21,4 +21,4 @@ int main() {
 
     cout << abs(d1 - d2) << endl; //Absolute difference of the sums across the diagonals
     return 0;
-
+}
