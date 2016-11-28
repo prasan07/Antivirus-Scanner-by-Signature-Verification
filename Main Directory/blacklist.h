@@ -10,6 +10,7 @@
 #include<unistd.h>
 #include <errno.h>
 #include <sys/types.h>
+#include <string.h>
 
 int blacklist_scan(char* filename);
 
