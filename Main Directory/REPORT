@@ -5,7 +5,7 @@ Contributors:
 
 Arun Ramachandran (aruramachand@cs.stonybrook.edu, <110852807>)
 Gangabarani Balakrishnan (gbalakrishna@cs.stonybrook.edu, <110975065>)
-Prasanth Sridhar (prsridhar@cs.stonybrook.edu, <enter SBU ID>)
+Prasanth Sridhar (prsridhar@cs.stonybrook.edu, <110899181>)
 Shyam Sundar Chandrasekaran (shychandrase@cs.stonybrook.edu, 110815338)
 ---------------------------------------------------------------------------------------------------
 
@@ -132,7 +132,30 @@ Hooking to the exec family of system calls was quite more difficult, because exe
 Finally, we were able to make use of an open source library( the udis86 disassembler), to find
  the sys_execve() address within stub code and hook to it.
 
-<Add about Comparison - Prasanth>
+Blacklist signature verification:
+
+On each file, signature verification is performed to scan and check for any blacklists.
+During each file scan, the following operations are performed:
+
+	1. Perform file stat mode validation and skip the scan process if it is an execuatable file.
+
+	2. Validate if the file is a whitelist using the isWhitelist() API call. If so, skip the scanning 
+process.
+
+	3. If the file is a non-whitelist execuatable, retrieve the blacklist info from the database using
+the getStructures() API call and pack them inside a user defined structure.
+
+	4. The blacklist signature retrieve from the database is in a user readable hexstring format.
+These signatures are formatted to a byte array.
+
+	5. The formatted bytearray is memcompared with a file binary to look for the pattern. If there is
+memcompare match, then the file is flagged as a blacklist and intimated to the controller program.
+
+
+
+
+
+
 
 Antivirus Userspace executable:
 
