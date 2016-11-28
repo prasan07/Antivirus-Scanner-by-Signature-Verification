@@ -26,11 +26,11 @@ The antivirus runs in two scanning modes:
            containing files, e.g. ./antivirus /home/jack/Downloads.
 
         ii) On Access Scanning:
-           In On Access scanning, in order to protect the user, a kernel driver hooks into the
-           appropriate system calls (e.g. open, execve, and execveat) and
-           scans the file before it is opened. If the file is infected, then the antivirus
-           refuses to open the file. Additionally, a message is printed in the kernel log to indicate
-           that the file is quarantined.
+           In On Access scanning, a kernel driver must hook to appropriate system calls
+           (e.g. open, execve, and execveat) and must scan the file before it is opened.
+           If the file is infected, then the file must not be opened.
+           Additionally, a message could be printed to the kernel log to indicate that the file
+           is infected. However, this did not work as part of our project.
 
 Details of usage can be found in the "INSTRUCTIONS" section.
 ----------------------------------------------------------------------------------------------------
@@ -112,24 +112,31 @@ Once the above two were done, we were able to hook to the open syscall. Upon ins
  we just saved the function pointer of the entry in the syscall_table array corresponding to
  sys_open(), pointed that entry to our custom function, and restored the old pointer upon exiting
  the module. The custom function invoked the virus-detection logic in user space, and either
- disallowed an open upon detecting an infected file or allowed the standard sys_open() to proceed.
+ disallow an open upon detecting an infected file or allow the standard sys_open() to proceed.
  This was possible because we used the stored pointer of the entry corresponding to sys_open().
 
 Hooking to the exec family of system calls was quite more difficult, because exec was a part of a
  set of operations for which assembly stubs were being added to the syscall. We tried the
  following techniques, which all failed :
 
-    Directly save the pointer of table[__NR_execve]
-	and reference it	 	      		:   Process got killed
-    Invoke do_execve(), the function 
-	invoked sys_execve()			        :   Process got Killed
-    Exploit SYSCALL_OPEN() directly                	:   Dangerous, because we will not be
-							    hooking as a module. This means that
-							    the interception is permanent.
-							    But this is the last case resort.
-Finally, we were able to make use of an open source library( the udis86 disassembler), to find
- the sys_execve() address within stub code and hook to it.
+    Directly save the pointer of
+    table[__NR_execve] and reference it	 	:   Process got killed
 
+    Directly invoke do_execve(), the function 
+        invoked by sys_execve()			:   Process got killed
+
+    Use the udis86 disassembler(open source
+    library), and determine the exact location
+    of the sys_execve() within the stub code	:   Able to hook correctly, but the provided input
+                                                    parameter in the form of a userspace address was
+                                                    seen as a bad address(-EFAULT), due to which the
+                                                    userspace logic could not correctly function
+
+    Exploit SYSCALL_OPEN() directly             :   This was what we finally resorted to. It is not
+                                                    the same as hooking in the form of a module.
+                                                    The interception is permanent. However, though this
+                                                    could invoke the userspace logic, the userspace could 						     not obtain the parameters passed by the kernel in a
+                                                    proper format
 Blacklist signature verification:
 
 On each file, signature verification is performed to scan and check for any blacklists.
@@ -161,7 +168,7 @@ that displays it in a message box.
 we decided to add recursive traversal of subdirectories and files so as to scan all the contents
 within a directory.
 So, to keep track of the current directory namespace, we maintain a stack that stores the index,
-within the namespace - the location within the namespace where the next directory
+within the namespace, the location within the namespace where the next directory
 name/file names needs to be added to
 
 The antivirus also supports scanning on softlinks - if a linked file is detected as a virus, its
@@ -227,7 +234,9 @@ REPORT            -     Project Report
 antivirus.c       -     Code for the antivirus userspace executable
 trapper.c	  - 	Module to intercept open and exec-related system calls, and invoke the userspace
 			virus-detection logic
-dboperations.c    -     This file contains all the main db operation APIs. The definitions of the following files are present.
+dboperations.c    -     This file contains all the main db operation APIs. The definitions of the following files are
+                        present.
+
                         1. verify_tables(MYSQL* conn)   - tests whether the given function has all 
                                                           the required db tables(whitelist, blacklist)
                         2. isWhitelisted(char* filepath)- generates the sha256 of the given file and  
@@ -236,9 +245,11 @@ dboperations.c    -     This file contains all the main db operation APIs. The d
                                                           formats it to a structure and returns to the caller.
                         4. updateStructures(int flag)   - retrieve the data from the remote db server, and update
                                                           the local db with that value.
-getsha256.c      -      Generates the sha256 hash of the filepath passed to it and returns it in 64 char long string.
-dbutility.h      -      The Main db header file contains all the API calls.
-dbwhitelist.h    -      This program populates the hash value into the db whitelist table for known files.
+getsha256.c       -     Generates the sha256 hash of the filepath passed to it and returns it in 64 char long string.
+dbutility.h       -     The Main db header file contains all the API calls.
+dbwhitelist.h     -     This program populates the hash value into the db whitelist table for known files.
+test_programs     -     Directory containing sample c and c++ programs that we used for testing
+test_script.sh    -     Shell script to compile and sanitize programs in test_programs directory
 
 The following set of files were used from a reference code in github, for the purpose of hooking into
 sys_execve and sys_execveat. Unlike the sys_open system call, for which the syscall_table's entry
@@ -255,15 +266,11 @@ udis86.h and libudis86/*
 		  -	Functions of the disassembler engine(to
                         inspect the input stream of machine code bytes)
 Makefile	  -	To compile and build the modules
-
 blacklist.h	  -	Exposes blacklist_scan function as an interface to the controller program and
 			contains the header files required for dbblacklist.c and blacklist.c
-
 blacklist.c	  - 	blacklist_scan implementation that performs byte-wise comparison between file binary
 			and blacklist signatures.
-
 dbblacklist.c	  -	A user program that updates newly discovered blacklists to the database.
-
 ----------------------------------------------------------------------------------------------------
 
 TESTING:
@@ -293,9 +300,17 @@ b) On-access scanning:
 	The dmesg log in the kernel must be checked to notice a message that the file is infected.
 	The standard linux utilities will be continuously opened and executed, without being affected in any way.
 	This could be verified by checking the dmesg logs to see that no such standard utility is reported as
-        being infected. Moreover, if such a thing happens, the user-detection logic would append the utility
+        infected. Moreover, if such a thing happens, the user-detection logic would append the utility
 	with a .virus, which would be noticed due to its impact on the system.
 ----------------------------------------------------------------------------------------------------
+
+LIMITATIONS:
+
+On-access does not work for both open and exec family of system calls.
+In both the cases, the original system calls could be intercepted by functions facilitated by a kernel module.
+But, the kernel had to invoke a user space application to perform the virus-detection, and
+the kernel could not pass the parameters in a correct manner that the user process could understand.
+-------------------------------------------------------------------------------------------------------
 
 REFERENCES:
 
