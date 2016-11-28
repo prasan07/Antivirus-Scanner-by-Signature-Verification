@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<math.h>
- 
+#include<stdlib.h> 
 char a[10][10];
 int n;
  
