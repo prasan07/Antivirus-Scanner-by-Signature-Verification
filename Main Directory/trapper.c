@@ -73,7 +73,7 @@ asmlinkage long new_open(const char __user *file, int flags, umode_t mode)
 		goto open;
 	} else {
 		if (statbuf.mode & S_IFREG)
-	//		printk("REGULAR FILE\n");
+			printk("REGULAR FILE\n");
 		else {
 			printk("NOT A REGULAR FILE\n");
 			goto open;
