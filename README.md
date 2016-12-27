@@ -7,6 +7,8 @@ Arun Ramachandran (aruramachand@cs.stonybrook.edu, <110852807>)
 Gangabarani Balakrishnan (gbalakrishna@cs.stonybrook.edu, <110975065>)
 Prasanth Sridhar (prsridhar@cs.stonybrook.edu, <110899181>)
 Shyam Sundar Chandrasekaran (shychandrase@cs.stonybrook.edu, <110815338>)
+
+The main code is in the folder "Main Directory"
 ---------------------------------------------------------------------------------------------------
 
 DESCRIPTION:
